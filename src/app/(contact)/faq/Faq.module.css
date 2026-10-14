@@ -1,0 +1,221 @@
+/* Frequently Asked Questions Styles */
+.container {
+  min-height: 90vh;
+  background-color: #FAF6EE;
+  padding-bottom: 70px;
+}
+
+/* Header Banner with Navbar clearance */
+.header {
+  background: linear-gradient(135deg, #3d0c0c 0%, #6e1818 50%, #1f0606 100%);
+  position: relative;
+  color: #ffffff;
+  padding: 125px 24px 50px;
+  border-bottom: 3px solid #D4AF37;
+  box-shadow: 0 10px 25px rgba(61, 12, 12, 0.2);
+}
+
+.header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 400px;
+  height: 100%;
+  background: radial-gradient(circle at top right, rgba(212, 175, 55, 0.15), transparent 70%);
+  pointer-events: none;
+}
+
+.headerInner {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #ecd7ba;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.breadcrumb a {
+  color: #ecd7ba;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.breadcrumb a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.current {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.title {
+  font-family: var(--font-serif-temple), "Cinzel", Georgia, serif;
+  font-size: 34px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+}
+
+.subtitle {
+  font-size: 15.5px;
+  color: #f7e6d2;
+  max-width: 780px;
+  line-height: 1.6;
+}
+
+/* Content Wrapper */
+.contentWrap {
+  max-width: 880px;
+  margin: -24px auto 0;
+  padding: 0 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.faqList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 36px;
+}
+
+.faqCard {
+  background: #ffffff;
+  border-radius: 14px;
+  border: 1px solid rgba(212, 175, 55, 0.28);
+  box-shadow: 0 6px 20px rgba(122, 28, 28, 0.04);
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+.faqCard:hover {
+  border-color: #D4AF37;
+  box-shadow: 0 8px 24px rgba(122, 28, 28, 0.08);
+}
+
+.faqOpen {
+  border-color: #f74f22;
+  box-shadow: 0 8px 24px rgba(247, 79, 34, 0.1);
+}
+
+.questionBtn {
+  width: 100%;
+  background: transparent;
+  border: none;
+  padding: 20px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  text-align: left;
+  gap: 16px;
+}
+
+.qLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.categoryBadge {
+  background: #faf6ee;
+  color: #8b5a00;
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  padding: 2px 10px;
+  border-radius: 9999px;
+  font-size: 11px;
+  font-weight: 700;
+  align-self: flex-start;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.questionText {
+  font-size: 16px;
+  font-weight: 700;
+  color: #111d2e;
+  line-height: 1.4;
+}
+
+.toggleIcon {
+  font-size: 24px;
+  color: #f74f22;
+  font-weight: 700;
+  line-height: 1;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #faf6ee;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.answerBox {
+  padding: 0 24px 22px;
+  border-top: 1px solid #ebd9c0;
+  background: #fffdfb;
+}
+
+.answerBox p {
+  padding-top: 16px;
+  font-size: 14.5px;
+  color: #475569;
+  line-height: 1.7;
+}
+
+/* Help Footer */
+.helpFooter {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 32px;
+  text-align: center;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  box-shadow: 0 8px 24px rgba(122, 28, 28, 0.05);
+}
+
+.helpFooter h3 {
+  font-family: var(--font-serif-temple), "Cinzel", Georgia, serif;
+  font-size: 20px;
+  color: #7A1C1C;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.helpFooter p {
+  font-size: 14px;
+  color: #64748b;
+  margin-bottom: 18px;
+}
+
+.callBtn {
+  display: inline-block;
+  background: linear-gradient(135deg, #f74f22 0%, #ff6b3d 100%);
+  color: #ffffff;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 15px;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(247, 79, 34, 0.25);
+  transition: all 0.2s ease;
+}
+
+.callBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(247, 79, 34, 0.35);
+}

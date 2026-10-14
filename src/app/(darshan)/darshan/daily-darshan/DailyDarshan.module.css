@@ -1,0 +1,189 @@
+.container {
+  min-height: 80vh;
+  background-color: var(--color-bg-light);
+  padding-bottom: var(--spacing-4xl);
+}
+
+.header {
+  background: linear-gradient(135deg, var(--color-navy) 0%, #1e293b 100%);
+  color: var(--color-white);
+  padding: var(--spacing-3xl) var(--spacing-xl);
+  border-bottom: 3px solid var(--color-saffron);
+}
+
+.headerInner {
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-size: var(--font-size-sm);
+  color: var(--color-gold-light);
+  margin-bottom: var(--spacing-md);
+}
+
+.breadcrumb a {
+  color: var(--color-gold-light);
+  text-decoration: none;
+}
+
+.current {
+  color: var(--color-white);
+  font-weight: 500;
+}
+
+.title {
+  font-size: var(--font-size-3xl);
+  font-weight: 700;
+  margin-bottom: var(--spacing-xs);
+  color: var(--color-white);
+}
+
+.subtitle {
+  font-size: var(--font-size-base);
+  color: #cbd5e1;
+  max-width: 800px;
+}
+
+.contentWrap {
+  max-width: var(--container-max);
+  margin: calc(-1 * var(--spacing-2xl)) auto 0;
+  padding: 0 var(--spacing-lg);
+}
+
+.dateBanner {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg) var(--spacing-xl);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-lg);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--color-gray-light);
+  margin-bottom: var(--spacing-2xl);
+  flex-wrap: wrap;
+}
+
+.calendarIcon {
+  font-size: 1.8rem;
+}
+
+.dateBanner strong {
+  color: var(--color-navy);
+}
+
+.liveLink {
+  margin-left: auto;
+  color: var(--color-saffron);
+  font-weight: 700;
+  text-decoration: none;
+  font-size: var(--font-size-sm);
+}
+
+.liveLink:hover {
+  text-decoration: underline;
+}
+
+.darshanGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-xl);
+}
+
+.darshanCard {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--color-gray-light);
+  display: flex;
+  flex-direction: column;
+}
+
+.imagePlaceholder {
+  width: 100%;
+  aspect-ratio: 4/3;
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.omWatermark {
+  font-size: 4rem;
+  color: rgba(247, 79, 34, 0.4);
+}
+
+.holyTag {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: var(--color-saffron);
+  color: var(--color-white);
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+}
+
+.cardInfo {
+  padding: var(--spacing-xl);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.timeTag {
+  font-size: var(--font-size-xs);
+  color: var(--color-saffron);
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.cardInfo h3 {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: var(--color-navy);
+  margin-bottom: var(--spacing-xs);
+}
+
+.cardInfo p {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  line-height: 1.5;
+  margin-bottom: var(--spacing-lg);
+  flex-grow: 1;
+}
+
+.cardActions {
+  display: flex;
+  gap: var(--spacing-xs);
+}
+
+.bookPujaBtn {
+  flex: 1;
+  background: var(--color-saffron);
+  color: var(--color-white);
+  text-align: center;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.prasadBtn {
+  flex: 1;
+  background: var(--color-navy);
+  color: var(--color-white);
+  text-align: center;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  text-decoration: none;
+}

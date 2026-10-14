@@ -1,0 +1,125 @@
+.container {
+  min-height: 80vh;
+  background-color: var(--color-bg-light);
+  padding-bottom: var(--spacing-4xl);
+}
+
+.header {
+  background: linear-gradient(135deg, var(--color-navy) 0%, #1e293b 100%);
+  color: var(--color-white);
+  padding: var(--spacing-3xl) var(--spacing-xl);
+  border-bottom: 3px solid var(--color-saffron);
+}
+
+.headerInner {
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-size: var(--font-size-sm);
+  color: var(--color-gold-light);
+  margin-bottom: var(--spacing-md);
+}
+
+.breadcrumb a {
+  color: var(--color-gold-light);
+  text-decoration: none;
+}
+
+.current {
+  color: var(--color-white);
+  font-weight: 500;
+}
+
+.title {
+  font-size: var(--font-size-3xl);
+  font-weight: 700;
+  margin-bottom: var(--spacing-xs);
+  color: var(--color-white);
+}
+
+.subtitle {
+  font-size: var(--font-size-base);
+  color: #cbd5e1;
+  max-width: 750px;
+}
+
+.contentWrap {
+  max-width: 850px;
+  margin: calc(-1 * var(--spacing-2xl)) auto 0;
+  padding: 0 var(--spacing-md);
+}
+
+.newsGrid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2xl);
+}
+
+.newsCard {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-2xl);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--color-gray-light);
+  border-left: 5px solid var(--color-saffron);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-md);
+}
+
+.categoryBadge {
+  background: rgba(247, 79, 34, 0.1);
+  color: var(--color-saffron);
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+}
+
+.dateTag {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+.newsTitle {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: var(--color-navy);
+  margin-bottom: var(--spacing-md);
+  line-height: 1.4;
+}
+
+.summary {
+  font-size: var(--font-size-base);
+  color: #334155;
+  line-height: 1.6;
+  margin-bottom: var(--spacing-md);
+  font-weight: 500;
+}
+
+.body {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin-bottom: var(--spacing-lg);
+}
+
+.cardFooter {
+  border-top: 1px solid var(--color-gray-light);
+  padding-top: var(--spacing-sm);
+}
+
+.pressSource {
+  font-size: var(--font-size-xs);
+  color: #64748b;
+  font-style: italic;
+}

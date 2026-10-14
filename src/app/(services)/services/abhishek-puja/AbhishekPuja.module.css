@@ -1,0 +1,366 @@
+.container {
+  min-height: 80vh;
+  background-color: var(--color-bg-light);
+  padding-bottom: var(--spacing-4xl);
+}
+
+.header {
+  background: linear-gradient(135deg, var(--color-navy) 0%, #1e293b 100%);
+  color: var(--color-white);
+  padding: var(--spacing-3xl) var(--spacing-xl);
+  border-bottom: 3px solid var(--color-saffron);
+}
+
+.headerInner {
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-size: var(--font-size-sm);
+  color: var(--color-gold-light);
+  margin-bottom: var(--spacing-md);
+}
+
+.breadcrumb a {
+  color: var(--color-gold-light);
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.current {
+  color: var(--color-white);
+  font-weight: 500;
+}
+
+.title {
+  font-size: var(--font-size-3xl);
+  font-weight: 700;
+  margin-bottom: var(--spacing-xs);
+  color: var(--color-white);
+}
+
+.subtitle {
+  font-size: var(--font-size-base);
+  color: #cbd5e1;
+  max-width: 750px;
+}
+
+.contentWrap {
+  max-width: var(--container-max);
+  margin: calc(-1 * var(--spacing-2xl)) auto 0;
+  padding: 0 var(--spacing-lg);
+}
+
+.timingBanner {
+  background: #fffbeb;
+  border: 1px solid #fef3c7;
+  border-left: 5px solid var(--color-gold);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg) var(--spacing-xl);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-2xl);
+  box-shadow: var(--shadow-sm);
+  font-size: var(--font-size-sm);
+  color: #78350f;
+  line-height: 1.6;
+}
+
+.clockIcon {
+  font-size: 2.2rem;
+  flex-shrink: 0;
+}
+
+.sectionHeading {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  color: var(--color-navy);
+  margin-bottom: var(--spacing-xl);
+  text-align: center;
+}
+
+.pujaGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-xl);
+  margin-bottom: var(--spacing-3xl);
+}
+
+.pujaCard {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-gray-light);
+  padding: var(--spacing-xl);
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.pujaCard:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--color-gold);
+}
+
+.cardTop {
+  border-bottom: 1px solid var(--color-gray-light);
+  padding-bottom: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+}
+
+.sanskritName {
+  font-size: var(--font-size-xs);
+  color: var(--color-saffron);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.pujaTitle {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: var(--color-navy);
+  margin: 4px 0 var(--spacing-sm);
+}
+
+.priceTag {
+  display: flex;
+  align-items: baseline;
+  gap: 2px;
+}
+
+.currency {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: var(--color-saffron);
+}
+
+.amount {
+  font-size: var(--font-size-2xl);
+  font-weight: 800;
+  color: var(--color-navy);
+}
+
+.perSeva {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  margin-left: 4px;
+}
+
+.metaRow {
+  display: flex;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+  flex-wrap: wrap;
+}
+
+.metaBadge {
+  background: #f1f5f9;
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  color: var(--color-navy);
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+}
+
+.pujaDesc {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  line-height: 1.5;
+  margin-bottom: var(--spacing-lg);
+  flex-grow: 1;
+}
+
+.inclusionsList {
+  background: #fafaf9;
+  border-radius: var(--radius-md);
+  padding: var(--spacing-md);
+  margin-bottom: var(--spacing-xl);
+}
+
+.inclusionsList h4 {
+  font-size: var(--font-size-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--color-navy);
+  font-weight: 700;
+  margin-bottom: var(--spacing-xs);
+}
+
+.inclusionsList ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: var(--font-size-xs);
+  color: #334155;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.cardActions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.bookBtn {
+  background: var(--color-saffron);
+  color: var(--color-white);
+  text-align: center;
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: var(--font-size-sm);
+  transition: background var(--transition-fast);
+}
+
+.bookBtn:hover {
+  background: var(--color-saffron-dark);
+}
+
+.onlineAradhanaBtn {
+  background: transparent;
+  color: var(--color-navy);
+  border: 1px solid var(--color-gray-light);
+  text-align: center;
+  padding: var(--spacing-sm);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  transition: all var(--transition-fast);
+}
+
+.onlineAradhanaBtn:hover {
+  border-color: var(--color-navy);
+  background: #f8fafc;
+}
+
+/* Schedule Table */
+.scheduleCard {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-2xl);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--color-gray-light);
+  margin-bottom: var(--spacing-3xl);
+}
+
+.scheduleTitle {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: var(--color-navy);
+  margin-bottom: var(--spacing-lg);
+}
+
+.tableResponsive {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--font-size-sm);
+}
+
+.table th {
+  background: var(--color-navy);
+  color: var(--color-white);
+  padding: var(--spacing-md);
+  text-align: left;
+  font-weight: 600;
+}
+
+.table td {
+  padding: var(--spacing-md);
+  border-bottom: 1px solid var(--color-gray-light);
+  color: var(--color-text-main);
+}
+
+.timeCell {
+  font-family: monospace;
+  font-weight: 600;
+  color: var(--color-saffron);
+  white-space: nowrap;
+}
+
+.ritualCell {
+  color: var(--color-navy);
+}
+
+.significanceCell {
+  color: var(--color-text-muted);
+}
+
+/* Help Section */
+.helpSection {
+  margin-bottom: var(--spacing-2xl);
+}
+
+.helpCard {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-2xl);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xl);
+  border: 1px solid var(--color-gray-light);
+}
+
+.helpIcon {
+  font-size: 2.5rem;
+  background: var(--color-white);
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.helpCard h3 {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: var(--color-navy);
+  margin-bottom: 4px;
+}
+
+.helpCard p {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  margin-bottom: var(--spacing-md);
+}
+
+.helplineNumbers {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.callBadge {
+  background: var(--color-navy);
+  color: var(--color-white);
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border-radius: var(--radius-full);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: var(--font-size-sm);
+}
+
+.callBadge:hover {
+  background: var(--color-saffron);
+}
+
+.timeNotice {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  font-weight: 500;
+}

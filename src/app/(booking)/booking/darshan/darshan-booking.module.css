@@ -1,0 +1,326 @@
+/* Darshan Booking Page Styles */
+.pageContainer {
+  min-height: 90vh;
+  background-color: #FAF6EE;
+  padding-bottom: 70px;
+}
+
+/* Header Banner with Navbar clearance */
+.headerBanner {
+  background: linear-gradient(135deg, #3d0c0c 0%, #6e1818 50%, #1f0606 100%);
+  position: relative;
+  color: #ffffff;
+  padding: 125px 24px 50px;
+  border-bottom: 3px solid #D4AF37;
+  box-shadow: 0 10px 25px rgba(61, 12, 12, 0.2);
+  margin-bottom: 40px;
+}
+
+.headerBanner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 400px;
+  height: 100%;
+  background: radial-gradient(circle at top right, rgba(212, 175, 55, 0.15), transparent 70%);
+  pointer-events: none;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #ecd7ba;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.breadcrumb a {
+  color: #ecd7ba;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.breadcrumb a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.current {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.categoryBadge {
+  display: inline-block;
+  background: rgba(247, 79, 34, 0.22);
+  border: 1px solid rgba(247, 79, 34, 0.6);
+  color: #ffc4a6;
+  padding: 4px 14px;
+  border-radius: 9999px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.pageTitle {
+  font-family: var(--font-serif-temple), "Cinzel", Georgia, serif;
+  font-size: 34px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+}
+
+.pageSubtitle {
+  font-size: 15.5px;
+  color: #f7e6d2;
+  max-width: 780px;
+  line-height: 1.6;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: 2.2fr 1fr;
+  gap: 32px;
+  align-items: flex-start;
+}
+
+.formCol {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.cardSection {
+  background: #ffffff;
+  border: 1px solid rgba(212, 175, 55, 0.28);
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 8px 24px rgba(122, 28, 28, 0.05);
+}
+
+.sectionTitle {
+  font-family: var(--font-serif-temple), "Cinzel", Georgia, serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #7A1C1C;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid rgba(212, 175, 55, 0.25);
+}
+
+.rowTwo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-bottom: 16px;
+}
+
+.rowThree {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 18px;
+  margin-bottom: 16px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.inputGroup label {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.input,
+.select {
+  padding: 11px 14px;
+  border: 1.5px solid #d9d0c1;
+  border-radius: 8px;
+  font-size: 15px;
+  color: #1e293b;
+  outline: none;
+  background: #ffffff;
+  transition: all 0.15s ease;
+  font-family: inherit;
+}
+
+.input:focus,
+.select:focus {
+  border-color: #f74f22;
+  box-shadow: 0 0 0 3px rgba(247, 79, 34, 0.12);
+}
+
+.hint {
+  font-size: 12px;
+  color: #64748b;
+}
+
+.attendeeRow {
+  background: #faf6ee;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 14px;
+}
+
+.attendeeHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.attendeeHeader h4 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #7A1C1C;
+}
+
+.btnRemove {
+  background: transparent;
+  color: #ef4444;
+  border: none;
+  font-size: 12.5px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btnAddAttendee {
+  background: #faf6ee;
+  border: 1.5px dashed #D4AF37;
+  color: #7A1C1C;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.15s ease;
+}
+
+.btnAddAttendee:hover {
+  background: #fdf5ea;
+  border-color: #f74f22;
+}
+
+/* Summary Box */
+.summaryCol {
+  position: sticky;
+  top: 96px;
+}
+
+.summaryBox {
+  background: #ffffff;
+  border: 2px solid #7A1C1C;
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 12px 32px rgba(122, 28, 28, 0.1);
+}
+
+.summaryTitle {
+  font-family: var(--font-serif-temple), "Cinzel", Georgia, serif;
+  font-size: 19px;
+  font-weight: 700;
+  color: #7A1C1C;
+  padding-bottom: 12px;
+  border-bottom: 2px dashed #d9d0c1;
+  margin-bottom: 18px;
+}
+
+.summaryList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.summaryItem {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #334155;
+  border-bottom: 1px solid #ebd9c0;
+  padding-bottom: 6px;
+}
+
+.summaryItem span {
+  color: #64748b;
+}
+
+.summaryItem strong {
+  color: #1f2937;
+  font-weight: 600;
+}
+
+.totalRow {
+  border-bottom: none;
+  border-top: 2px solid #7A1C1C;
+  padding-top: 10px;
+  font-size: 16px;
+}
+
+.totalAmount {
+  font-size: 26px !important;
+  color: #f74f22 !important;
+  font-weight: 800 !important;
+}
+
+.btnSubmit {
+  background: linear-gradient(135deg, #f74f22 0%, #ff6b3d 100%);
+  color: #ffffff;
+  border: none;
+  padding: 14px 20px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 15.5px;
+  width: 100%;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 6px 18px rgba(247, 79, 34, 0.28);
+}
+
+.btnSubmit:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(247, 79, 34, 0.38);
+}
+
+.btnSubmit:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.securityNote {
+  font-size: 12px;
+  color: #64748b;
+  text-align: center;
+  margin-top: 14px;
+}
+
+.errorAlert {
+  background: #fef2f2;
+  color: #b91c1c;
+  padding: 14px 18px;
+  border-radius: 8px;
+  font-size: 14px;
+  border: 1px solid #fecaca;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 900px) {
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+  .rowTwo, .rowThree {
+    grid-template-columns: 1fr;
+  }
+}

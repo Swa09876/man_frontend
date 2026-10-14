@@ -1,0 +1,72 @@
+.topBar {
+  background-color: #111d2e;
+  color: #ffffff;
+  font-size: 13px;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.link {
+  color: #ffffff;
+  transition: color 0.2s ease;
+  font-weight: 500;
+}
+
+.link:hover {
+  color: var(--saffron-primary);
+}
+
+.divider {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.rightSection {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.helplineNotice {
+  color: #fbbf24;
+  font-weight: 600;
+}
+
+.helplineNotice a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.translateWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.langBadge {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .helplineNotice {
+    display: none;
+  }
+}

@@ -1,0 +1,198 @@
+.container {
+  min-height: 80vh;
+  background-color: var(--color-bg-light);
+  padding-bottom: var(--spacing-4xl);
+}
+
+.header {
+  background: linear-gradient(135deg, var(--color-navy) 0%, #1e293b 100%);
+  color: var(--color-white);
+  padding: var(--spacing-3xl) var(--spacing-xl);
+  border-bottom: 3px solid var(--color-saffron);
+}
+
+.headerInner {
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-size: var(--font-size-sm);
+  color: var(--color-gold-light);
+  margin-bottom: var(--spacing-md);
+}
+
+.breadcrumb a {
+  color: var(--color-gold-light);
+  text-decoration: none;
+}
+
+.current {
+  color: var(--color-white);
+  font-weight: 500;
+}
+
+.title {
+  font-size: var(--font-size-3xl);
+  font-weight: 700;
+  margin-bottom: var(--spacing-xs);
+  color: var(--color-white);
+}
+
+.subtitle {
+  font-size: var(--font-size-base);
+  color: #cbd5e1;
+  max-width: 800px;
+}
+
+.contentWrap {
+  max-width: 900px;
+  margin: calc(-1 * var(--spacing-2xl)) auto 0;
+  padding: 0 var(--spacing-md);
+}
+
+.contactGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-xl);
+  margin-bottom: var(--spacing-2xl);
+}
+
+@media (max-width: 768px) {
+  .contactGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.infoCard {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-2xl);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--color-gray-light);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 2px solid var(--color-saffron);
+}
+
+.icon {
+  font-size: 1.8rem;
+}
+
+.cardHeader h3 {
+  font-size: var(--font-size-lg);
+  color: var(--color-navy);
+  font-weight: 700;
+}
+
+.cardContent p {
+  font-size: var(--font-size-sm);
+  color: #334155;
+  line-height: 1.7;
+  margin-bottom: var(--spacing-lg);
+}
+
+.contactLine {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-size: var(--font-size-sm);
+  margin-bottom: var(--spacing-xs);
+}
+
+.label {
+  color: var(--color-navy);
+  font-weight: 600;
+}
+
+.contactLine a {
+  color: var(--color-saffron);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.deptList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.deptItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 1px dashed var(--color-gray-light);
+  gap: var(--spacing-sm);
+}
+
+.deptItem strong {
+  display: block;
+  font-size: var(--font-size-sm);
+  color: var(--color-navy);
+}
+
+.deptItem span {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+.phoneTag {
+  background: #f1f5f9;
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  color: var(--color-navy);
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+}
+
+.actionBanner {
+  background: linear-gradient(135deg, var(--color-navy) 0%, #1e293b 100%);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
+  color: var(--color-white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-xl);
+  box-shadow: var(--shadow-lg);
+}
+
+@media (max-width: 640px) {
+  .actionBanner {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.actionBanner h3 {
+  font-size: var(--font-size-lg);
+  color: var(--color-gold);
+  margin-bottom: 2px;
+}
+
+.actionBanner p {
+  font-size: var(--font-size-xs);
+  color: #cbd5e1;
+}
+
+.feedbackBtn {
+  background: var(--color-saffron);
+  color: var(--color-white);
+  padding: var(--spacing-md) var(--spacing-xl);
+  border-radius: var(--radius-md);
+  font-weight: 700;
+  font-size: var(--font-size-sm);
+  text-decoration: none;
+  white-space: nowrap;
+}

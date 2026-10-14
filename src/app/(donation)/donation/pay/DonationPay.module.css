@@ -1,0 +1,413 @@
+.container {
+  min-height: 80vh;
+  background-color: var(--color-bg-light);
+  padding-bottom: var(--spacing-4xl);
+}
+
+.header {
+  background: linear-gradient(135deg, var(--color-navy) 0%, #1e293b 100%);
+  color: var(--color-white);
+  padding: var(--spacing-3xl) var(--spacing-xl);
+  border-bottom: 3px solid var(--color-saffron);
+}
+
+.headerInner {
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-size: var(--font-size-sm);
+  color: var(--color-gold-light);
+  margin-bottom: var(--spacing-md);
+}
+
+.breadcrumb a {
+  color: var(--color-gold-light);
+  text-decoration: none;
+}
+
+.current {
+  color: var(--color-white);
+  font-weight: 500;
+}
+
+.title {
+  font-size: var(--font-size-3xl);
+  font-weight: 700;
+  margin-bottom: var(--spacing-xs);
+  color: var(--color-white);
+}
+
+.subtitle {
+  font-size: var(--font-size-base);
+  color: #cbd5e1;
+  max-width: 750px;
+}
+
+.contentWrap {
+  max-width: 850px;
+  margin: calc(-1 * var(--spacing-2xl)) auto 0;
+  padding: 0 var(--spacing-md);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+}
+
+.card {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-2xl);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--color-gray-light);
+}
+
+.cardSectionTitle {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: var(--color-navy);
+  margin-bottom: var(--spacing-xl);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 1px solid var(--color-gray-light);
+}
+
+.badgeNum {
+  background: var(--color-saffron);
+  color: var(--color-white);
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  margin-bottom: var(--spacing-lg);
+}
+
+.formGroup label {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-navy);
+}
+
+.req {
+  color: #ef4444;
+}
+
+.opt {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  font-weight: 400;
+}
+
+.selectInput, .textInput, .textareaInput {
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-size: var(--font-size-base);
+  border: 1.5px solid var(--color-gray-light);
+  border-radius: var(--radius-md);
+  background: var(--color-white);
+  color: var(--color-navy);
+  font-family: inherit;
+  outline: none;
+  transition: border-color var(--transition-fast);
+}
+
+.selectInput:focus, .textInput:focus, .textareaInput:focus {
+  border-color: var(--color-saffron);
+  box-shadow: 0 0 0 3px rgba(247, 79, 34, 0.15);
+}
+
+.amountSection {
+  margin-top: var(--spacing-md);
+}
+
+.amountSection label {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-navy);
+  display: block;
+  margin-bottom: var(--spacing-sm);
+}
+
+.presetButtons {
+  display: flex;
+  gap: var(--spacing-sm);
+  flex-wrap: wrap;
+  margin-bottom: var(--spacing-md);
+}
+
+.presetBtn {
+  background: #f8fafc;
+  border: 1.5px solid var(--color-gray-light);
+  color: var(--color-navy);
+  padding: var(--spacing-sm) var(--spacing-lg);
+  font-size: var(--font-size-base);
+  font-weight: 700;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.presetBtn:hover {
+  border-color: var(--color-saffron);
+}
+
+.presetBtnActive {
+  background: var(--color-saffron);
+  border-color: var(--color-saffron);
+  color: var(--color-white);
+}
+
+.customAmountWrap {
+  display: flex;
+  align-items: center;
+  max-width: 320px;
+  border: 1.5px solid var(--color-gray-light);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.rupeePrefix {
+  background: #f1f5f9;
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-weight: 700;
+  color: var(--color-navy);
+  border-right: 1px solid var(--color-gray-light);
+}
+
+.customInput {
+  border: none;
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-size: var(--font-size-base);
+  width: 100%;
+  outline: none;
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-lg);
+}
+
+.grid3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: var(--spacing-lg);
+}
+
+@media (max-width: 768px) {
+  .grid2, .grid3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.checkoutBar {
+  background: linear-gradient(135deg, var(--color-navy) 0%, #1e293b 100%);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-lg);
+  color: var(--color-white);
+  box-shadow: var(--shadow-lg);
+}
+
+@media (max-width: 640px) {
+  .checkoutBar {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.checkoutLabel {
+  font-size: var(--font-size-sm);
+  color: #94a3b8;
+  display: block;
+}
+
+.checkoutPrice {
+  font-size: var(--font-size-3xl);
+  font-weight: 800;
+  color: var(--color-gold);
+}
+
+.formError {
+  background: rgba(239, 68, 68, 0.2);
+  border: 1px solid #ef4444;
+  color: #fca5a5;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-xs);
+}
+
+.submitBtn {
+  background: var(--color-saffron);
+  color: var(--color-white);
+  border: none;
+  padding: var(--spacing-md) var(--spacing-2xl);
+  font-size: var(--font-size-base);
+  font-weight: 700;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.submitBtn:hover:not(:disabled) {
+  background: var(--color-saffron-dark);
+  box-shadow: 0 4px 14px rgba(247, 79, 34, 0.4);
+}
+
+/* Receipt View */
+.receiptContainer {
+  min-height: 80vh;
+  background: var(--color-bg-light);
+  padding: var(--spacing-3xl) var(--spacing-md);
+  display: flex;
+  justify-content: center;
+}
+
+.receiptCard {
+  background: var(--color-white);
+  max-width: 700px;
+  width: 100%;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-xl);
+  border: 2px solid var(--color-gold);
+  padding: var(--spacing-3xl);
+}
+
+.receiptHeader {
+  text-align: center;
+  border-bottom: 2px solid var(--color-navy);
+  padding-bottom: var(--spacing-xl);
+  margin-bottom: var(--spacing-xl);
+}
+
+.mandirLogo {
+  font-size: 3rem;
+  color: var(--color-saffron);
+}
+
+.mandirTitle {
+  font-size: var(--font-size-xl);
+  font-weight: 800;
+  color: var(--color-navy);
+  letter-spacing: 0.5px;
+}
+
+.mandirAddress {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  margin-bottom: var(--spacing-md);
+}
+
+.badge80G {
+  background: #dcfce7;
+  color: #15803d;
+  font-weight: 700;
+  font-size: var(--font-size-xs);
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  display: inline-block;
+  letter-spacing: 0.5px;
+}
+
+.urnText {
+  font-size: var(--font-size-xs);
+  color: var(--color-navy);
+  margin-top: 4px;
+}
+
+.receiptDetails {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  background: #fafaf9;
+  border-radius: var(--radius-md);
+  padding: var(--spacing-xl);
+  margin-bottom: var(--spacing-xl);
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--font-size-sm);
+  color: #334155;
+  border-bottom: 1px dashed #e2e8f0;
+  padding-bottom: 4px;
+}
+
+.totalRow {
+  border-bottom: none;
+  padding-top: var(--spacing-xs);
+  border-top: 2px solid var(--color-navy);
+}
+
+.amountDisplay {
+  font-size: var(--font-size-xl);
+  color: var(--color-saffron);
+}
+
+.blessingBox {
+  background: #fffbeb;
+  border-left: 4px solid var(--color-gold);
+  padding: var(--spacing-md);
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--spacing-xl);
+  text-align: center;
+}
+
+.shloka {
+  font-family: serif;
+  font-size: var(--font-size-sm);
+  color: #92400e;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.blessingEn {
+  font-size: var(--font-size-xs);
+  color: #78350f;
+}
+
+.receiptActions {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: center;
+}
+
+.printBtn {
+  background: var(--color-navy);
+  color: var(--color-white);
+  padding: var(--spacing-md) var(--spacing-xl);
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+
+.backBtn {
+  background: var(--color-gray-light);
+  color: var(--color-navy);
+  padding: var(--spacing-md) var(--spacing-xl);
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  text-decoration: none;
+}

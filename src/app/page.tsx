@@ -77,48 +77,85 @@ export default function HomePage() {
             <div className={styles.welcomeTextCol}>
               <div className={styles.sectionBadge}>
                 <span className={styles.badgeDot}></span>
-                <span>SACRED ABODE</span>
+                <span>SACRED ORIGIN & PURANIC HISTORY</span>
               </div>
-              <h2 className={styles.welcomeHeading}>Discover the Sacred Home of Lord Shiva</h2>
+              <h2 className={styles.welcomeHeading}>The Timeless History of Shri Omkareshwar</h2>
               <p className={styles.welcomeLead}>
-                Located on the sacred island of Mandhata along the Narmada River, Omkareshwar is a
-                revered destination for devotees seeking spiritual connection, blessings, and a deeper
-                experience of India's sacred heritage.
+                Revered for over two millennia as the fourth sacred Jyotirlinga, Shri Omkareshwar presides
+                majestically on the sacred island of Mandhata, where Maa Narmada naturally carves the eternal
+                syllable &apos;ॐ&apos;. Its sacred history weaves ancient Puranic penance, Jagadguru Adi
+                Shankaracharya&apos;s spiritual revival, and regal temple architecture across dynasties.
               </p>
 
               <div className={styles.welcomeFeatures}>
                 <div className={styles.welcomeFeatureItem}>
-                  <div className={styles.featureIcon}>🕉️</div>
-                  <div>
-                    <h4>Island Formed in the Shape of 'ॐ'</h4>
-                    <p>Maa Narmada naturally flows around the island carving the eternal Pranava mantra 'Om'.</p>
+                  <div className={styles.featureIconWrap}>
+                    <span className={styles.featureIcon}>🔱</span>
+                  </div>
+                  <div className={styles.featureTextWrap}>
+                    <div className={styles.featureMeta}>
+                      <span className={styles.featureEpoch}>PURANIC ORIGINS • SATYAYUGA</span>
+                    </div>
+                    <h4>King Mandhata&apos;s Penance &amp; Swayambhu Manifestation</h4>
+                    <p>
+                      According to the Shiva Purana, King Mandhata performed intense penance on this island. Pleased by his supreme devotion, Bhagwan Shiva appeared and manifested as the self-emerged (Swayambhu) Jyotirlinga.
+                    </p>
                   </div>
                 </div>
 
                 <div className={styles.welcomeFeatureItem}>
-                  <div className={styles.featureIcon}>🔱</div>
-                  <div>
-                    <h4>Two Sanctuaries, One Jyotirlinga</h4>
-                    <p>Visiting both Shri Omkareshwar and the southern Shri Mamleshwar completes the sacred pilgrimage.</p>
+                  <div className={styles.featureIconWrap}>
+                    <span className={styles.featureIcon}>🕉️</span>
+                  </div>
+                  <div className={styles.featureTextWrap}>
+                    <div className={styles.featureMeta}>
+                      <span className={styles.featureEpoch}>SACRED GEOGRAPHY</span>
+                    </div>
+                    <h4>Naturally Carved &apos;ॐ&apos; Island &amp; Dual Shrines</h4>
+                    <p>
+                      Maa Narmada naturally divides around Mandhata island, carving the sacred cosmic sound &apos;Om&apos;. The pilgrimage unites two holy shrines — Shri Omkareshwar and the southern Shri Mamleshwar — into one indivisible Jyotirlinga.
+                    </p>
                   </div>
                 </div>
 
                 <div className={styles.welcomeFeatureItem}>
-                  <div className={styles.featureIcon}>🪔</div>
-                  <div>
-                    <h4>Adi Shankaracharya Cave</h4>
-                    <p>Revered site of Govinda Bhagavatpada Guha where Jagadguru Adi Shankara received spiritual Diksha.</p>
+                  <div className={styles.featureIconWrap}>
+                    <span className={styles.featureIcon}>🪔</span>
+                  </div>
+                  <div className={styles.featureTextWrap}>
+                    <div className={styles.featureMeta}>
+                      <span className={styles.featureEpoch}>8TH CENTURY CE • ADVAITA REVIVAL</span>
+                    </div>
+                    <h4>Jagadguru Adi Shankaracharya&apos;s Guru Diksha</h4>
+                    <p>
+                      At the sacred Govinda Bhagavatpada Guha cave on this island, Jagadguru Adi Shankara met his Guru and received divine initiation, embarking from here to revive Sanatana Dharma across Bharat.
+                    </p>
+                  </div>
+                </div>
+
+                <div className={styles.welcomeFeatureItem}>
+                  <div className={styles.featureIconWrap}>
+                    <span className={styles.featureIcon}>🏛️</span>
+                  </div>
+                  <div className={styles.featureTextWrap}>
+                    <div className={styles.featureMeta}>
+                      <span className={styles.featureEpoch}>ARCHITECTURAL HERITAGE • 2000+ YEARS</span>
+                    </div>
+                    <h4>Five-Storeyed Nagara Temple &amp; Holkar Legacy</h4>
+                    <p>
+                      Enriched by Paramara kings and reconstructed with royal reverence by Maharani Ahilyabai Holkar, the five-tiered stone temple features intricate carvings, celestial sabhamandaps, and golden spires.
+                    </p>
                   </div>
                 </div>
               </div>
 
               <div className={styles.welcomeActions}>
                 <Link href="/about/main-temple" className="btn-primary">
-                  <span>Learn More About Mandir</span>
+                  <span>Explore Full Mandir History</span>
                   <span>→</span>
                 </Link>
-                <Link href="/how-to-reach" className="btn-secondary">
-                  <span>How to Reach</span>
+                <Link href="/about/parikrama" className="btn-secondary">
+                  <span>Omkar Parikrama Route</span>
                 </Link>
               </div>
             </div>
@@ -127,18 +164,43 @@ export default function HomePage() {
               <div className={styles.imageFrameWrapper}>
                 <div className={styles.decorativeCornerTL}></div>
                 <div className={styles.decorativeCornerBR}></div>
-                <div className={styles.imageContainer}>
-                  <Image
-                    src="/images/omkareshwar-ghat.jpg"
-                    alt="Holy Narmada River Ghats at Shri Omkareshwar Temple"
-                    width={700}
-                    height={460}
-                    className={styles.welcomeImg}
-                    priority
-                  />
-                  <div className={styles.imageBadge}>
-                    <span className={styles.badgeLocation}>Mandhata Island • Narmada Tat</span>
-                    <span className={styles.badgeSub}>Shri Omkareshwar Teerth Kshetra</span>
+                
+                <div className={styles.imagesStack}>
+                  {/* Image 1: Ancient Omkareshwar Nagara Temple Architecture */}
+                  <div className={styles.imageContainer}>
+                    <Image
+                      src="/images/omkareshwar-temple-history.jpg"
+                      alt="Ancient multi-tiered Shri Omkareshwar Jyotirlinga Temple with Nagara stone architecture"
+                      width={700}
+                      height={480}
+                      className={styles.welcomeImg}
+                      priority
+                    />
+                    <div className={styles.imageTagOverlay}>
+                      <span className={styles.imageTagPill}>🏛️ 2000+ YEARS HERITAGE</span>
+                    </div>
+                    <div className={styles.imageBadge}>
+                      <span className={styles.badgeLocation}>Ancient 5-Tiered Nagara Temple</span>
+                      <span className={styles.badgeSub}>Shri Omkareshwar Jyotirlinga Sanctum &amp; Spire</span>
+                    </div>
+                  </div>
+
+                  {/* Image 2: Holy Narmada River Ghats & Mandhata Island */}
+                  <div className={styles.imageContainer}>
+                    <Image
+                      src="/images/omkareshwar-ghat.jpg"
+                      alt="Holy Narmada River Ghats and Mandhata Island at Shri Omkareshwar Temple"
+                      width={700}
+                      height={400}
+                      className={styles.welcomeImg}
+                    />
+                    <div className={styles.imageTagOverlay}>
+                      <span className={styles.imageTagPill}>🕉️ SACRED &apos;ॐ&apos; ISLAND</span>
+                    </div>
+                    <div className={styles.imageBadge}>
+                      <span className={styles.badgeLocation}>Mandhata Island • Holy Narmada Ghats</span>
+                      <span className={styles.badgeSub}>Sacred Snan Steps &amp; Parikrama Boat Passage</span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -327,45 +389,84 @@ export default function HomePage() {
           </div>
 
           <div className={styles.eventsGrid}>
+            {/* Card 1: Mahashivratri */}
             <div className={styles.eventCard}>
-              <div className={styles.eventDateBadge}>
-                <span className={styles.eventMonth}>FESTIVAL</span>
-                <span className={styles.eventDay}>MAHASHIVRATRI</span>
+              <div className={styles.eventImageWrap}>
+                <Image
+                  src="/images/festival-mahashivratri.jpg"
+                  alt="Mahashivratri Mahotsav Celebration at Shri Omkareshwar Jyotirlinga"
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 380px"
+                  className={styles.eventImg}
+                />
+                <div className={styles.eventBadgeOverlay}>
+                  <span className={styles.eventTag}>FESTIVAL</span>
+                  <span className={styles.eventDate}>MAHASHIVRATRI</span>
+                </div>
               </div>
               <div className={styles.eventBody}>
-                <h3>Mahashivratri Mahotsav</h3>
-                <p>
+                <h3 className={styles.eventTitle}>Mahashivratri Mahotsav</h3>
+                <p className={styles.eventDesc}>
                   Grand 24-hour non-stop darshan, continuous Vedic Rudrabhishek ceremonies, and midnight Bhasma Aarti with lakhs of visiting devotees.
                 </p>
-                <Link href="/about/festivals" className={styles.eventLink}>Festival Details →</Link>
+                <Link href="/about/festivals" className={styles.eventLink}>
+                  <span>Festival Details</span>
+                  <span className={styles.eventArrow}>→</span>
+                </Link>
               </div>
             </div>
 
+            {/* Card 2: Kartik Purnima */}
             <div className={styles.eventCard}>
-              <div className={styles.eventDateBadge}>
-                <span className={styles.eventMonth}>FESTIVAL</span>
-                <span className={styles.eventDay}>KARTIK PURNIMA</span>
+              <div className={styles.eventImageWrap}>
+                <Image
+                  src="/images/festival-kartik-purnima.jpg"
+                  alt="Kartik Purnima Deepotsav on sacred River Narmada at Omkareshwar"
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 380px"
+                  className={styles.eventImg}
+                />
+                <div className={styles.eventBadgeOverlay}>
+                  <span className={styles.eventTag}>FESTIVAL</span>
+                  <span className={styles.eventDate}>KARTIK PURNIMA</span>
+                </div>
               </div>
               <div className={styles.eventBody}>
-                <h3>Kartik Purnima & Deepotsav</h3>
-                <p>
+                <h3 className={styles.eventTitle}>Kartik Purnima &amp; Deepotsav</h3>
+                <p className={styles.eventDesc}>
                   Auspicious festival marked by thousands of floating oil lamps on Maa Narmada, special boat parikrama, and grand Annakshetra feasts.
                 </p>
-                <Link href="/about/festivals" className={styles.eventLink}>Festival Details →</Link>
+                <Link href="/about/festivals" className={styles.eventLink}>
+                  <span>Festival Details</span>
+                  <span className={styles.eventArrow}>→</span>
+                </Link>
               </div>
             </div>
 
+            {/* Card 3: Narmada Jayanti */}
             <div className={styles.eventCard}>
-              <div className={styles.eventDateBadge}>
-                <span className={styles.eventMonth}>FESTIVAL</span>
-                <span className={styles.eventDay}>NARMADA JAYANTI</span>
+              <div className={styles.eventImageWrap}>
+                <Image
+                  src="/images/festival-narmada-jayanti.jpg"
+                  alt="Maa Narmada Jayanti Mahotsav Chunari Offering at Omkareshwar Ghats"
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 380px"
+                  className={styles.eventImg}
+                />
+                <div className={styles.eventBadgeOverlay}>
+                  <span className={styles.eventTag}>FESTIVAL</span>
+                  <span className={styles.eventDate}>NARMADA JAYANTI</span>
+                </div>
               </div>
               <div className={styles.eventBody}>
-                <h3>Maa Narmada Jayanti Mahotsav</h3>
-                <p>
+                <h3 className={styles.eventTitle}>Maa Narmada Jayanti Mahotsav</h3>
+                <p className={styles.eventDesc}>
                   Annual celebration honoring the holy River Narmada featuring a 500-meter sacred chunari offering and special Maha Jalabhishek.
                 </p>
-                <Link href="/about/festivals" className={styles.eventLink}>Festival Details →</Link>
+                <Link href="/about/festivals" className={styles.eventLink}>
+                  <span>Festival Details</span>
+                  <span className={styles.eventArrow}>→</span>
+                </Link>
               </div>
             </div>
           </div>

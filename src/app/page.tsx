@@ -13,42 +13,56 @@ export const metadata = {
 export default function HomePage() {
   return (
     <div className={styles.homeWrapper}>
-      {/* 1. Hero Section - Immersive Spiritual Landing */}
-      <section className={styles.heroSection} aria-label="Shri Omkareshwar Jyotirlinga Hero Banner">
-        <div className={styles.heroOverlay}>
-          <div className={`container ${styles.heroContainer}`}>
-            <div className={styles.heroContent}>
-              <div className={styles.eyebrowBadge}>
-                <span className={styles.badgeOm}>ॐ</span>
-                <span className={styles.badgeText}>ONE OF THE SACRED TWELVE JYOTIRLINGAS</span>
-              </div>
-
-              <h1 className={styles.heroHeading}>Shri Omkareshwar Jyotirling</h1>
-
-              <p className={styles.heroSubtext}>
-                Experience the divine presence of Lord Shiva at the sacred island of Omkareshwar,
-                nestled along the holy Narmada River in Madhya Pradesh.
-              </p>
-
-              <div className={styles.heroCtaGroup}>
-                <Link href="/darshan/vishesh-darshan" className={styles.primaryCtaBtn}>
-                  <span>Book Darshan</span>
-                  <span className={styles.ctaArrow}>→</span>
-                </Link>
-
-                <Link href="#welcome" className={styles.secondaryCtaBtn}>
-                  <span>Explore the Temple</span>
-                  <span className={styles.ctaIcon}>🏛️</span>
-                </Link>
-              </div>
+      {/* 1. Temple Banner Showcase - Real Photographic Hero View with Name Plaque */}
+      <section className={styles.templeShowcaseSection} aria-label="Shri Omkareshwar Jyotirlinga, Omkareshwar">
+        <div className={styles.bannerContainer}>
+          <div className={styles.bannerImageWrapper}>
+            <Image
+              src="/images/omkareshwar-main-banner.jpg"
+              alt="Shri Omkareshwar Jyotirlinga, Omkareshwar"
+              width={1920}
+              height={850}
+              priority
+              className={styles.templeBannerImage}
+            />
+            {/* Elegant Translucent Name Plaque exactly as indicated by the user's reference screenshot */}
+            <div className={styles.templeNamePlaque}>
+              <h1 className={styles.plaqueTitle}>
+                Shri Omkareshwar Jyotirlinga, Omkareshwar
+              </h1>
             </div>
+          </div>
+        </div>
 
-            <a href="#info-strip" className={styles.scrollIndicator} aria-label="Scroll down to explore temple highlights">
-              <span className={styles.scrollText}>Discover More</span>
-              <svg className={styles.scrollChevron} viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-              </svg>
-            </a>
+        {/* Quick Online Services Navigation Strip directly beneath the banner */}
+        <div className={styles.quickServicesRibbon}>
+          <div className="container">
+            <div className={styles.quickServicesList}>
+              <Link href="/darshan/vishesh-darshan" className={styles.quickServicePill}>
+                <span className={styles.quickPillIcon}>🔱</span>
+                <span>Shighra Darshan</span>
+              </Link>
+              <Link href="/services/online-puja" className={styles.quickServicePill}>
+                <span className={styles.quickPillIcon}>🪔</span>
+                <span>Abhishek & Puja</span>
+              </Link>
+              <Link href="/services/accommodation" className={styles.quickServicePill}>
+                <span className={styles.quickPillIcon}>🏨</span>
+                <span>Vishramalaya Stay</span>
+              </Link>
+              <Link href="/services/prasadalaya" className={styles.quickServicePill}>
+                <span className={styles.quickPillIcon}>🍲</span>
+                <span>Prasadalaya Meal</span>
+              </Link>
+              <Link href="/prasad/order-online" className={styles.quickServicePill}>
+                <span className={styles.quickPillIcon}>📦</span>
+                <span>Laddu Mahaprasad</span>
+              </Link>
+              <Link href="/donation/online-donation" className={styles.quickServicePillHighlight}>
+                <span className={styles.quickPillIcon}>🪙</span>
+                <span>Donation (80G)</span>
+              </Link>
+            </div>
           </div>
         </div>
       </section>

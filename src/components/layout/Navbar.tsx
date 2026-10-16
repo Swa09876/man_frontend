@@ -9,9 +9,20 @@ import styles from "./Navbar.module.css";
 export const Navbar: React.FC = () => {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
   const wrapperRef = useRef<HTMLDivElement | null>(null);
   const router = useRouter();
+
+  // Track window scroll to enrich navbar appearance when devotee scrolls down
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 15);
+    };
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   // Clear hover timer
   const clearTimer = () => {
@@ -64,7 +75,7 @@ export const Navbar: React.FC = () => {
 
   return (
     <div className={styles.headerWrapper} ref={wrapperRef}>
-      <header className={styles.header}>
+      <header className={`${styles.header} ${isScrolled ? styles.headerScrolled : ""}`}>
         <div className={styles.container}>
           {/* Brand Logo */}
           <Link href="/" className={styles.brand} onClick={() => setActiveDropdown(null)}>

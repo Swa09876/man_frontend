@@ -1,44 +1,46 @@
-/* Floating Detached Navbar Wrapper */
+/* Fixed Full-Width Navbar Wrapper */
 .headerWrapper {
-  position: sticky;
-  top: 16px;
+  position: fixed;
+  top: 0;
   left: 0;
   right: 0;
   width: 100%;
   z-index: 1000;
-  display: flex;
-  justify-content: center;
-  pointer-events: none;
-  padding: 0 20px;
-  margin-bottom: -84px;
+  pointer-events: auto;
+  transition: all 0.25s ease;
 }
 
-/* Floating Glassmorphic Pill Header */
+/* Full-Width Glassmorphic Header */
 .header {
-  pointer-events: auto;
   width: 100%;
-  max-width: var(--container-max);
-  background: rgba(255, 255, 255, 0.76);
+  background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
-  border: 1px solid rgba(212, 175, 55, 0.45);
-  border-radius: 50px;
-  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.12), 0 2px 10px rgba(122, 28, 28, 0.08);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.4);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(122, 28, 28, 0.04);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+.headerScrolled {
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(122, 28, 28, 0.06);
+  border-bottom-color: rgba(212, 175, 55, 0.6);
+}
+
 .header:hover {
-  background: rgba(255, 255, 255, 0.86);
-  border-color: rgba(212, 175, 55, 0.65);
-  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.16), 0 4px 12px rgba(122, 28, 28, 0.1);
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom-color: rgba(212, 175, 55, 0.65);
 }
 
 .container {
-  padding: 0 22px;
+  width: 100%;
+  max-width: 1680px;
+  margin: 0 auto;
+  padding: 0 32px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 64px;
+  height: 68px;
 }
 
 .brand {
@@ -300,35 +302,48 @@
 }
 
 /* Responsive adjustments */
-@media (max-width: 1120px) {
+@media (max-width: 1200px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  .navRightWrapper {
+    gap: 8px;
+  }
+
   .navButton {
-    font-size: 12.5px;
-    padding: 6px 8px;
+    font-size: 12px;
+    padding: 6px 7px;
+    gap: 3px;
   }
 
   .headerCtaBtn {
-    padding: 7px 14px;
+    padding: 7px 12px;
     font-size: 12px;
   }
 
   .brandTitle {
-    font-size: 16.5px;
+    font-size: 16px;
+  }
+
+  .brandSubtitle {
+    font-size: 10px;
   }
 }
 
 @media (max-width: 1024px) {
   .headerWrapper {
-    top: 10px;
-    padding: 0 12px;
-    margin-bottom: -74px;
+    top: 0;
+    padding: 0;
+    margin: 0;
   }
 
   .header {
-    border-radius: 24px;
+    border-radius: 0;
   }
 
   .container {
-    height: 58px;
+    height: 60px;
     padding: 0 16px;
   }
 
@@ -343,15 +358,15 @@
   .nav {
     display: none;
     position: absolute;
-    top: calc(100% + 10px);
+    top: 100%;
     left: 0;
     width: 100%;
     background: #ffffff;
     box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
-    border: 1px solid var(--gold-border);
-    border-radius: 20px;
+    border-bottom: 2px solid var(--gold-border);
+    border-radius: 0 0 16px 16px;
     padding: 20px;
-    max-height: calc(100vh - 90px);
+    max-height: calc(100vh - 65px);
     overflow-y: auto;
   }
 

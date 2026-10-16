@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import styles from "./page.module.css";
 import { TEMPLE_INFO } from "@/lib/constants";
+import { DevotionalServicesCarousel } from "@/components/home/DevotionalServicesCarousel";
 
 export const metadata = {
   title: "Shri Omkareshwar Jyotirlinga Official Website | Mandhata, Madhya Pradesh",
@@ -33,83 +34,38 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-
-        {/* Quick Online Services Navigation Strip directly beneath the banner */}
-        <div className={styles.quickServicesRibbon}>
-          <div className="container">
-            <div className={styles.quickServicesList}>
-              <Link href="/darshan/vishesh-darshan" className={styles.quickServicePill}>
-                <span className={styles.quickPillIcon}>🔱</span>
-                <span>Shighra Darshan</span>
-              </Link>
-              <Link href="/services/online-puja" className={styles.quickServicePill}>
-                <span className={styles.quickPillIcon}>🪔</span>
-                <span>Abhishek & Puja</span>
-              </Link>
-              <Link href="/services/accommodation" className={styles.quickServicePill}>
-                <span className={styles.quickPillIcon}>🏨</span>
-                <span>Vishramalaya Stay</span>
-              </Link>
-              <Link href="/services/prasadalaya" className={styles.quickServicePill}>
-                <span className={styles.quickPillIcon}>🍲</span>
-                <span>Prasadalaya Meal</span>
-              </Link>
-              <Link href="/prasad/order-online" className={styles.quickServicePill}>
-                <span className={styles.quickPillIcon}>📦</span>
-                <span>Laddu Mahaprasad</span>
-              </Link>
-              <Link href="/donation/online-donation" className={styles.quickServicePillHighlight}>
-                <span className={styles.quickPillIcon}>🪙</span>
-                <span>Donation (80G)</span>
-              </Link>
-            </div>
-          </div>
-        </div>
       </section>
 
-      {/* 2. Temple Information Strip */}
-      <section id="info-strip" className={styles.infoStripSection} aria-label="Temple Highlights">
+      {/* 2. Temple Statistics & Daily Live Darshan */}
+      <section id="temple-stats" className={styles.statsSection} aria-label="Temple Statistics & Live Darshan">
         <div className="container">
-          <div className={styles.infoGrid}>
-            <div className={styles.infoCard}>
-              <div className={styles.infoIconWrapper}>
-                <span className={styles.infoSymbol}>🔱</span>
-              </div>
-              <div className={styles.infoText}>
-                <h3 className={styles.infoTitle}>Sacred Jyotirlinga</h3>
-                <p className={styles.infoDesc}>4th of the 12 Divine Jyotirlingas, enshrined on Mandhata Island</p>
-              </div>
+          <div className={styles.statsGrid}>
+            <div className={styles.statCard}>
+              <div className={styles.statNumber}>1,50,000+</div>
+              <div className={styles.statLabel}>Daily Visitors</div>
             </div>
 
-            <div className={styles.infoCard}>
-              <div className={styles.infoIconWrapper}>
-                <span className={styles.infoSymbol}>🌊</span>
-              </div>
-              <div className={styles.infoText}>
-                <h3 className={styles.infoTitle}>Holy Narmada River</h3>
-                <p className={styles.infoDesc}>River Narmada embraces the island forming the sacred 'ॐ' cosmic shape</p>
-              </div>
+            <div className={styles.statCard}>
+              <div className={styles.statNumber}>2000+</div>
+              <div className={styles.statLabel}>Years of History</div>
             </div>
 
-            <div className={styles.infoCard}>
-              <div className={styles.infoIconWrapper}>
-                <span className={styles.infoSymbol}>🪔</span>
-              </div>
-              <div className={styles.infoText}>
-                <h3 className={styles.infoTitle}>Temple Darshan</h3>
-                <p className={styles.infoDesc}>Daily Mangal, Madhyahna, and Shayan Aarti Darshan schedules</p>
-              </div>
+            <div className={styles.statCard}>
+              <div className={styles.statNumber}>5</div>
+              <div className={styles.statLabel}>Daily Aartis</div>
             </div>
 
-            <div className={styles.infoCard}>
-              <div className={styles.infoIconWrapper}>
-                <span className={styles.infoSymbol}>🕉️</span>
-              </div>
-              <div className={styles.infoText}>
-                <h3 className={styles.infoTitle}>Spiritual Heritage</h3>
-                <p className={styles.infoDesc}>Timeless Shaiva traditions and Puranic sanctity preserved for millennia</p>
-              </div>
+            <div className={styles.statCard}>
+              <div className={styles.statNumber}>53</div>
+              <div className={styles.statLabel}>Temples in Premises</div>
             </div>
+          </div>
+
+          <div className={styles.statsActionWrapper}>
+            <Link href="/darshan/live" className={styles.liveDarshanBtn}>
+              <span>Daily Live Darshan</span>
+              <span className={styles.liveDarshanArrow}>→</span>
+            </Link>
           </div>
         </div>
       </section>
@@ -123,7 +79,7 @@ export default function HomePage() {
                 <span className={styles.badgeDot}></span>
                 <span>SACRED ABODE</span>
               </div>
-              <h2 className={styles.welcomeHeading}>Discover the Divine Abode of Lord Shiva</h2>
+              <h2 className={styles.welcomeHeading}>Discover the Sacred Home of Lord Shiva</h2>
               <p className={styles.welcomeLead}>
                 Located on the sacred island of Mandhata along the Narmada River, Omkareshwar is a
                 revered destination for devotees seeking spiritual connection, blessings, and a deeper
@@ -191,131 +147,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 4. Prominent Darshan and Services Section */}
-      <section className={styles.servicesSection}>
-        <div className="container">
-          <div className={styles.sectionHeader}>
-            <div className={styles.sectionBadge}>
-              <span className={styles.badgeDot}></span>
-              <span>DEVOTEE SERVICES</span>
-            </div>
-            <h2 className="section-title">Temple Darshan & Devotional Services</h2>
-            <p className="section-subtitle">
-              Plan your pilgrimage with authentic services provided directly by Shri Omkareshwar Mandir Trust.
-            </p>
-          </div>
-
-          <div className={styles.servicesGrid}>
-            {/* Card 1: Shighra Darshan */}
-            <div className={styles.serviceCard}>
-              <div className={styles.cardHeader}>
-                <span className={styles.cardIconBadge}>⚡ Priority</span>
-                <span className={styles.cardPrice}>₹300</span>
-              </div>
-              <h3 className={styles.cardTitle}>Book Shighra Darshan</h3>
-              <p className={styles.cardDesc}>
-                Fast-track entry pass to Sabhamandap darshan, minimizing queue waiting times for elderly pilgrims and families.
-              </p>
-              <div className={styles.cardFooter}>
-                <Link href="/darshan/vishesh-darshan" className={styles.cardActionBtn}>
-                  <span>Book Darshan Pass</span>
-                  <span>→</span>
-                </Link>
-              </div>
-            </div>
-
-            {/* Card 2: Abhishek Puja */}
-            <div className={styles.serviceCard}>
-              <div className={styles.cardHeader}>
-                <span className={styles.cardIconBadge}>🔱 Vedic Rituals</span>
-                <span className={styles.cardPrice}>From ₹2,100</span>
-              </div>
-              <h3 className={styles.cardTitle}>Explore Pooja Services</h3>
-              <p className={styles.cardDesc}>
-                Authentic Vedic Jalabhishek, Panchamrit, and Laghu Rudrabhishek performed at the Abhishek Sthal by authorized Brahmins.
-              </p>
-              <div className={styles.cardFooter}>
-                <Link href="/services/abhishek-puja" className={styles.cardActionBtn}>
-                  <span>View Puja Services</span>
-                  <span>→</span>
-                </Link>
-              </div>
-            </div>
-
-            {/* Card 3: Laddu Mahaprasad */}
-            <div className={styles.serviceCard}>
-              <div className={styles.cardHeader}>
-                <span className={styles.cardIconBadge}>🪔 Desi Ghee Bhog</span>
-                <span className={styles.cardPrice}>From ₹120</span>
-              </div>
-              <h3 className={styles.cardTitle}>Laddu Mahaprasad</h3>
-              <p className={styles.cardDesc}>
-                Sanctified pure Besan Laddu Mahaprasad made with Desi Ghee. Delivered safely to your doorstep across India via Speed Post.
-              </p>
-              <div className={styles.cardFooter}>
-                <Link href="/prasad/laddu-mahaprasad" className={styles.cardActionBtn}>
-                  <span>Order Mahaprasad</span>
-                  <span>→</span>
-                </Link>
-              </div>
-            </div>
-
-            {/* Card 4: Donations & Seva */}
-            <div className={styles.serviceCard}>
-              <div className={styles.cardHeader}>
-                <span className={styles.cardIconBadge}>🌸 80G Tax Exemption</span>
-                <span className={styles.cardPrice}>Punya Seva</span>
-              </div>
-              <h3 className={styles.cardTitle}>Make a Donation</h3>
-              <p className={styles.cardDesc}>
-                Support free daily meals at Omkar Annakshetra, Akhand Nanda Deepak, and Mandir conservation with official 80G tax receipt.
-              </p>
-              <div className={styles.cardFooter}>
-                <Link href="/donation" className={styles.cardActionBtn}>
-                  <span>Donate for Holy Cause</span>
-                  <span>→</span>
-                </Link>
-              </div>
-            </div>
-
-            {/* Card 5: Vishramalaya Stay */}
-            <div className={styles.serviceCard}>
-              <div className={styles.cardHeader}>
-                <span className={styles.cardIconBadge}>🏛️ Mandir Stay</span>
-                <span className={styles.cardPrice}>Advance Booking</span>
-              </div>
-              <h3 className={styles.cardTitle}>Vishramalaya Facilities</h3>
-              <p className={styles.cardDesc}>
-                Clean and affordable AC & non-AC rooms and pilgrim guest halls managed by the Trust close to the temple ghats.
-              </p>
-              <div className={styles.cardFooter}>
-                <Link href="/booking/vishramalaya" className={styles.cardActionBtn}>
-                  <span>Check Room Availability</span>
-                  <span>→</span>
-                </Link>
-              </div>
-            </div>
-
-            {/* Card 6: E-Aradhana Remote Pujan */}
-            <div className={styles.serviceCard}>
-              <div className={styles.cardHeader}>
-                <span className={styles.cardIconBadge}>✨ Remote Pujan</span>
-                <span className={styles.cardPrice}>Live Sankalp</span>
-              </div>
-              <h3 className={styles.cardTitle}>E-Aradhana Online</h3>
-              <p className={styles.cardDesc}>
-                Unable to visit in person? Personalized Gotra Sankalp Puja conducted by temple priests with sanctified prasad dispatched home.
-              </p>
-              <div className={styles.cardFooter}>
-                <Link href="/services/e-aradhana" className={styles.cardActionBtn}>
-                  <span>Book E-Aradhana</span>
-                  <span>→</span>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* 4. Prominent Darshan and Services Carousel matching reference design */}
+      <DevotionalServicesCarousel />
 
       {/* 5. Live Darshan & Daily Timetable */}
       <section className={styles.liveSection}>

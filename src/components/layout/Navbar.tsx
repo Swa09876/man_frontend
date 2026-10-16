@@ -86,95 +86,84 @@ export const Navbar: React.FC = () => {
             </div>
           </Link>
 
-          {/* Mobile Hamburger Toggle */}
-          <button
-            className={styles.mobileToggle}
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-label="Toggle navigation"
-          >
-            <span className={styles.hamburgerLine}></span>
-            <span className={styles.hamburgerLine}></span>
-            <span className={styles.hamburgerLine}></span>
-          </button>
-
-          {/* Navigation Menus & Action */}
-          <div className={styles.navRightWrapper}>
-            <nav className={`${styles.nav} ${mobileMenuOpen ? styles.navOpen : ""}`}>
-              <ul className={styles.navList}>
-                {NAVIGATION_MENUS.map((menu) => {
-                  const isOpen = activeDropdown === menu.title;
-                  return (
-                    <li
-                      key={menu.title}
-                      className={styles.navItem}
-                      onMouseEnter={() => handleMouseEnter(menu.title)}
-                      onMouseLeave={handleMouseLeave}
+          {/* Navigation Menus (Centered & Evenly Balanced) */}
+          <nav className={`${styles.nav} ${mobileMenuOpen ? styles.navOpen : ""}`}>
+            <ul className={styles.navList}>
+              {NAVIGATION_MENUS.map((menu) => {
+                const isOpen = activeDropdown === menu.title;
+                return (
+                  <li
+                    key={menu.title}
+                    className={styles.navItem}
+                    onMouseEnter={() => handleMouseEnter(menu.title)}
+                    onMouseLeave={handleMouseLeave}
+                  >
+                    <button
+                      type="button"
+                      className={`${styles.navButton} ${isOpen ? styles.navButtonActive : ""}`}
+                      onClick={() => toggleDropdown(menu.title)}
+                      aria-expanded={isOpen}
                     >
-                      <button
-                        type="button"
-                        className={`${styles.navButton} ${isOpen ? styles.navButtonActive : ""}`}
-                        onClick={() => toggleDropdown(menu.title)}
-                        aria-expanded={isOpen}
+                      <span>{menu.title}</span>
+                      <svg
+                        className={`${styles.chevron} ${isOpen ? styles.chevronRotated : ""}`}
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        aria-hidden="true"
                       >
-                        <span>{menu.title}</span>
-                        <svg
-                          className={`${styles.chevron} ${isOpen ? styles.chevronRotated : ""}`}
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                          aria-hidden="true"
-                        >
-                          <path
-                            fillRule="evenodd"
-                            d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
-                            clipRule="evenodd"
-                          />
-                        </svg>
-                      </button>
+                        <path
+                          fillRule="evenodd"
+                          d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                    </button>
 
-                      {/* Dropdown Menu */}
-                      {isOpen && (
-                        <div
-                          className={styles.dropdownMenuWrapper}
-                          onMouseEnter={clearTimer}
-                          onMouseLeave={handleMouseLeave}
-                        >
-                          <ul className={styles.dropdownMenu}>
-                            {menu.items.map((subItem) => (
-                              <li key={subItem.href} className={styles.dropdownItem}>
-                                <button
-                                  type="button"
-                                  className={styles.dropdownLink}
-                                  onClick={() => handleLinkNavigation(subItem.href)}
-                                >
-                                  <span className={styles.itemLabel}>{subItem.label}</span>
-                                  {subItem.isNew && (
-                                    <span className={styles.newBadge}>NEW</span>
-                                  )}
-                                </button>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      )}
-                    </li>
-                  );
-                })}
-              </ul>
+                    {/* Dropdown Menu */}
+                    {isOpen && (
+                      <div
+                        className={styles.dropdownMenuWrapper}
+                        onMouseEnter={clearTimer}
+                        onMouseLeave={handleMouseLeave}
+                      >
+                        <ul className={styles.dropdownMenu}>
+                          {menu.items.map((subItem) => (
+                            <li key={subItem.href} className={styles.dropdownItem}>
+                              <button
+                                type="button"
+                                className={styles.dropdownLink}
+                                onClick={() => handleLinkNavigation(subItem.href)}
+                              >
+                                <span className={styles.itemLabel}>{subItem.label}</span>
+                                {subItem.isNew && (
+                                  <span className={styles.newBadge}>NEW</span>
+                                )}
+                              </button>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+                  </li>
+                );
+              })}
+            </ul>
 
-              {/* Mobile Book Darshan Button */}
-              <div className={styles.mobileAction}>
-                <Link
-                  href="/darshan/vishesh-darshan"
-                  className={styles.bookDarshanBtn}
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  <span>Book Darshan</span>
-                  <span className={styles.btnArrow}>→</span>
-                </Link>
-              </div>
-            </nav>
+            {/* Mobile Book Darshan Button */}
+            <div className={styles.mobileAction}>
+              <Link
+                href="/darshan/vishesh-darshan"
+                className={styles.bookDarshanBtn}
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                <span>Book Darshan</span>
+                <span className={styles.btnArrow}>→</span>
+              </Link>
+            </div>
+          </nav>
 
-            {/* Desktop Highlighted Book Darshan Action */}
+          {/* Action Wrapper (CTA Button & Mobile Toggle) */}
+          <div className={styles.actionWrapper}>
             <Link
               href="/darshan/vishesh-darshan"
               className={styles.headerCtaBtn}
@@ -183,6 +172,17 @@ export const Navbar: React.FC = () => {
               <span>Book Darshan</span>
               <span className={styles.btnArrow}>→</span>
             </Link>
+
+            {/* Mobile Hamburger Toggle */}
+            <button
+              className={styles.mobileToggle}
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label="Toggle navigation"
+            >
+              <span className={styles.hamburgerLine}></span>
+              <span className={styles.hamburgerLine}></span>
+              <span className={styles.hamburgerLine}></span>
+            </button>
           </div>
         </div>
       </header>

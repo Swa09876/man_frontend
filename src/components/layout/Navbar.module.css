@@ -34,9 +34,9 @@
 
 .container {
   width: 100%;
-  max-width: 1680px;
+  max-width: 1320px;
   margin: 0 auto;
-  padding: 0 32px;
+  padding: 0 24px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -87,21 +87,23 @@
   text-transform: uppercase;
 }
 
-.navRightWrapper {
+.actionWrapper {
   display: flex;
   align-items: center;
   gap: 14px;
+  flex-shrink: 0;
 }
 
 .nav {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .navList {
   display: flex;
   list-style: none;
-  gap: 2px;
+  gap: 6px;
   margin: 0;
   padding: 0;
 }
@@ -304,11 +306,15 @@
 /* Responsive adjustments */
 @media (max-width: 1200px) {
   .container {
-    padding: 0 20px;
+    padding: 0 16px;
   }
 
-  .navRightWrapper {
+  .actionWrapper {
     gap: 8px;
+  }
+
+  .navList {
+    gap: 3px;
   }
 
   .navButton {

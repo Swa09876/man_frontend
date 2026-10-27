@@ -1,328 +1,925 @@
+/* ==========================================================================
+   Shri Omkareshwar Jyotirlinga - Clean & Elegant Seva & Donation Portal
+   ========================================================================== */
+
+/* 1. Page Container & Navbar Clearance */
 .container {
-  min-height: 80vh;
-  background-color: var(--color-bg-light);
-  padding-bottom: var(--spacing-4xl);
+  min-height: 100vh;
+  background-color: #FAF6EE;
+  padding-bottom: 90px;
+  position: relative;
+  overflow-x: hidden;
 }
 
+/* 2. Grand & Serene Temple Hero Banner */
 .header {
-  background: linear-gradient(135deg, var(--color-navy) 0%, #1e293b 100%);
-  color: var(--color-white);
-  padding: var(--spacing-3xl) var(--spacing-xl);
-  border-bottom: 3px solid var(--color-saffron);
+  background: linear-gradient(135deg, #240a0a 0%, #3d0c0c 35%, #6e1818 75%, #1a0404 100%);
+  position: relative;
+  color: #ffffff;
+  padding: 140px 24px 80px; /* 140px guarantees ample clearance below fixed navbar */
+  border-bottom: 3px solid #D4AF37;
+  box-shadow: 0 14px 35px rgba(36, 10, 10, 0.28);
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Radiant sacred ambient aura in background */
+.header::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 900px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.2) 0%, rgba(247, 79, 34, 0.08) 50%, transparent 70%);
+  pointer-events: none;
+  z-index: 1;
 }
 
 .headerInner {
-  max-width: var(--container-max);
+  max-width: 960px;
   margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+/* Breadcrumbs */
 .breadcrumb {
   display: flex;
   align-items: center;
-  gap: var(--spacing-sm);
-  font-size: var(--font-size-sm);
-  color: var(--color-gold-light);
-  margin-bottom: var(--spacing-md);
-}
-
-.breadcrumb a {
-  color: var(--color-gold-light);
-  text-decoration: none;
-}
-
-.current {
-  color: var(--color-white);
-  font-weight: 500;
-}
-
-.title {
-  font-size: var(--font-size-3xl);
-  font-weight: 700;
-  margin-bottom: var(--spacing-xs);
-  color: var(--color-white);
-}
-
-.subtitle {
-  font-size: var(--font-size-base);
-  color: #cbd5e1;
-  max-width: 750px;
-}
-
-.contentWrap {
-  max-width: var(--container-max);
-  margin: calc(-1 * var(--spacing-2xl)) auto 0;
-  padding: 0 var(--spacing-lg);
-}
-
-.taxExemptionCard {
-  background: #f0fdf4;
-  border: 1px solid #bbf7d0;
-  border-left: 6px solid #16a34a;
-  border-radius: var(--radius-lg);
-  padding: var(--spacing-xl);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--spacing-xl);
-  box-shadow: var(--shadow-md);
-  margin-bottom: var(--spacing-3xl);
+  gap: 8px;
+  font-size: 13.5px;
+  color: #ffd875;
+  margin-bottom: 18px;
   flex-wrap: wrap;
 }
 
-.taxBadge {
-  background: #16a34a;
-  color: var(--color-white);
-  font-size: var(--font-size-xs);
-  font-weight: 700;
-  padding: 4px 10px;
-  border-radius: var(--radius-full);
+.breadcrumb a {
+  color: #ffd875;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.15s ease;
 }
 
-.taxContent {
-  flex: 1;
-  min-width: 280px;
+.breadcrumb a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.current {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+/* Sacred Sanskrit Invocation Pill */
+.sanskritPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(212, 175, 55, 0.18);
+  border: 1px solid rgba(212, 175, 55, 0.55);
+  color: #ffe8a3;
+  padding: 6px 18px;
+  border-radius: 9999px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  margin-bottom: 18px;
+  backdrop-filter: blur(8px);
+}
+
+.omSign {
+  font-size: 17px;
+  color: #f74f22;
+  font-weight: 800;
+}
+
+.pageTitle {
+  font-family: var(--font-serif-temple), "Cinzel", Georgia, serif;
+  font-size: clamp(30px, 4.5vw, 44px);
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 14px;
+  letter-spacing: 0.8px;
+  line-height: 1.22;
+  text-shadow: 0 3px 14px rgba(0, 0, 0, 0.45);
+}
+
+.shlokaQuote {
+  font-family: var(--font-serif-temple), Georgia, serif;
+  font-size: 15.5px;
+  color: #ffd875;
+  font-style: italic;
+  margin-bottom: 16px;
+  letter-spacing: 0.3px;
+  opacity: 0.95;
+}
+
+.pageSubtitle {
+  font-size: 16px;
+  color: #f5e4d2;
+  max-width: 780px;
+  line-height: 1.65;
+  margin: 0 auto 28px;
+}
+
+/* Hero Quick Actions */
+.heroActions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.btnHeroPrimary {
+  background: linear-gradient(135deg, #f74f22 0%, #e03b0f 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  padding: 13px 28px;
+  font-weight: 700;
+  font-size: 15px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 6px 20px rgba(247, 79, 34, 0.38);
+  transition: all 0.2s ease;
+}
+
+.btnHeroPrimary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 26px rgba(247, 79, 34, 0.5);
+  color: #ffffff;
+}
+
+.btnHeroSecondary {
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffd875;
+  border: 1.5px solid rgba(212, 175, 55, 0.5);
+  border-radius: 10px;
+  padding: 12px 24px;
+  font-weight: 600;
+  font-size: 14.5px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(8px);
+}
+
+.btnHeroSecondary:hover {
+  background: rgba(212, 175, 55, 0.25);
+  color: #ffffff;
+  border-color: #ffd875;
+  transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   3. Content Wrapper
+   ========================================================================== */
+.contentWrap {
+  max-width: var(--container-max, 1220px);
+  margin: -35px auto 0; /* Pull content up slightly into hero gradient for seamless transition */
+  padding: 0 24px;
+  position: relative;
+  z-index: 3;
+}
+
+/* ==========================================================================
+   4. Sleek & Prestigious 80G Tax Exemption Card
+   ========================================================================== */
+.taxExemptionCard {
+  background: #ffffff;
+  border: 1.5px solid #16a34a;
+  border-radius: 16px;
+  padding: 22px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  box-shadow: 0 8px 30px rgba(22, 163, 74, 0.1);
+  margin-bottom: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.taxExemptionCard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 100%;
+  background: #16a34a;
+}
+
+.taxLeft {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.taxEmblem {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #ecfdf5;
+  border: 2px solid #86efac;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  flex-shrink: 0;
 }
 
 .taxContent h3 {
-  font-size: var(--font-size-lg);
-  color: #14532d;
+  font-size: 17px;
   font-weight: 700;
-  margin-bottom: 4px;
+  color: #14532d;
+  margin: 0 0 4px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.taxBadgeInline {
+  background: #16a34a;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 9999px;
+  letter-spacing: 0.5px;
 }
 
 .taxContent p {
-  font-size: var(--font-size-sm);
+  font-size: 13.5px;
   color: #166534;
   line-height: 1.5;
+  margin: 0;
+}
+
+.urnCode {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-weight: 700;
+  background: #dcfce7;
+  padding: 2px 8px;
+  border-radius: 4px;
+  border: 1px solid #86efac;
+  color: #14532d;
+}
+
+.btnCopyUrn {
+  background: #dcfce7;
+  border: 1px solid #86efac;
+  border-radius: 4px;
+  padding: 2px 7px;
+  font-size: 11px;
+  color: #14532d;
+  cursor: pointer;
+  margin-left: 6px;
+  font-weight: 600;
+  transition: all 0.15s ease;
+}
+
+.btnCopyUrn:hover {
+  background: #bbf7d0;
 }
 
 .claim80GBtn {
   background: #14532d;
-  color: var(--color-white);
-  padding: var(--spacing-md) var(--spacing-xl);
-  border-radius: var(--radius-md);
+  color: #ffffff;
+  padding: 12px 22px;
+  border-radius: 8px;
   text-decoration: none;
-  font-weight: 600;
-  font-size: var(--font-size-sm);
+  font-weight: 700;
+  font-size: 14px;
   white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 14px rgba(20, 83, 45, 0.25);
+  transition: all 0.2s ease;
+  flex-shrink: 0;
 }
 
 .claim80GBtn:hover {
   background: #166534;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(20, 83, 45, 0.35);
+  color: #ffffff;
 }
 
-.gridHeader {
+/* ==========================================================================
+   5. Impact Ribbon (Trust Numbers)
+   ========================================================================== */
+.impactRibbon {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 40px;
+}
+
+.impactCard {
+  background: #ffffff;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 14px;
+  padding: 18px 20px;
+  box-shadow: 0 4px 16px rgba(122, 28, 28, 0.04);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.impactCard:hover {
+  transform: translateY(-3px);
+  border-color: #D4AF37;
+  box-shadow: 0 8px 22px rgba(122, 28, 28, 0.08);
+}
+
+.impactIcon {
+  font-size: 26px;
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background: #fbf5eb;
+  border: 1px solid #eddcc6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.impactText strong {
+  font-family: var(--font-serif-temple), "Cinzel", Georgia, serif;
+  font-size: 17.5px;
+  color: #7A1C1C;
+  display: block;
+  line-height: 1.2;
+}
+
+.impactText p {
+  font-size: 12.5px;
+  color: #64748b;
+  margin: 3px 0 0;
+}
+
+/* ==========================================================================
+   6. Category Filter Tabs
+   ========================================================================== */
+.sectionHeadingArea {
   text-align: center;
-  margin-bottom: var(--spacing-2xl);
+  margin-bottom: 26px;
 }
 
-.gridHeader h2 {
-  font-size: var(--font-size-2xl);
+.sectionHeadingArea h2 {
+  font-family: var(--font-serif-temple), "Cinzel", Georgia, serif;
+  font-size: 28px;
   font-weight: 700;
-  color: var(--color-navy);
-  margin-bottom: 4px;
+  color: #7A1C1C;
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
 }
 
-.gridHeader p {
-  font-size: var(--font-size-base);
-  color: var(--color-text-muted);
+.sectionHeadingArea p {
+  font-size: 15px;
+  color: #64748b;
+  max-width: 650px;
+  margin: 0 auto;
 }
 
+.filterTabs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 34px;
+  flex-wrap: wrap;
+}
+
+.filterTab {
+  background: #ffffff;
+  color: #556275;
+  border: 1.5px solid #e2d9cc;
+  border-radius: 9999px;
+  padding: 9px 22px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.filterTab:hover {
+  border-color: #D4AF37;
+  color: #7A1C1C;
+}
+
+.filterTabActive {
+  background: #7A1C1C !important;
+  color: #ffffff !important;
+  border-color: #7A1C1C !important;
+  box-shadow: 0 4px 14px rgba(122, 28, 28, 0.25);
+}
+
+/* ==========================================================================
+   7. Refined Seva Cards Grid
+   ========================================================================== */
 .categoriesGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: var(--spacing-xl);
-  margin-bottom: var(--spacing-4xl);
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 28px;
+  margin-bottom: 50px;
 }
 
 .categoryCard {
-  background: var(--color-white);
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--color-gray-light);
-  box-shadow: var(--shadow-md);
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1.5px solid rgba(212, 175, 55, 0.3);
+  box-shadow: 0 6px 20px rgba(122, 28, 28, 0.06);
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  position: relative;
 }
 
 .categoryCard:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-xl);
-  border-color: var(--color-saffron);
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(122, 28, 28, 0.12);
+  border-color: #D4AF37;
 }
 
-.cardHeader {
-  padding: var(--spacing-lg);
-  background: #fafaf9;
-  border-bottom: 1px solid var(--color-gray-light);
+/* Card Visual Image Banner */
+.cardImageWrap {
+  position: relative;
+  height: 200px;
+  width: 100%;
+  overflow: hidden;
+  background: #240a0a;
+}
+
+.cardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.categoryCard:hover .cardImage {
+  transform: scale(1.05);
+}
+
+.cardImageOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(36, 10, 10, 0.8) 100%);
   display: flex;
+  align-items: flex-end;
   justify-content: space-between;
-  align-items: center;
-}
-
-.cardIcon {
-  font-size: 2rem;
+  padding: 14px 18px;
 }
 
 .cardBadge {
-  background: rgba(247, 79, 34, 0.1);
-  color: var(--color-saffron);
-  font-size: var(--font-size-xs);
-  font-weight: 600;
-  padding: 3px 8px;
-  border-radius: var(--radius-full);
+  background: rgba(247, 79, 34, 0.92);
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
+.taxMiniBadge {
+  background: rgba(22, 163, 74, 0.92);
+  color: #ffffff;
+  font-size: 10.5px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 9999px;
+  letter-spacing: 0.5px;
+}
+
+/* Card Content Body */
 .cardBody {
-  padding: var(--spacing-xl);
-  flex-grow: 1;
+  padding: 22px 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .hindiTitle {
-  font-size: var(--font-size-xs);
-  color: var(--color-saffron);
+  font-size: 13px;
+  color: #f74f22;
   font-weight: 700;
+  letter-spacing: 0.4px;
+  margin-bottom: 4px;
 }
 
 .cardTitle {
-  font-size: var(--font-size-lg);
-  color: var(--color-navy);
+  font-family: var(--font-serif-temple), "Cinzel", Georgia, serif;
+  font-size: 19px;
   font-weight: 700;
-  margin: 4px 0 var(--spacing-sm);
+  color: #1e293b;
+  margin-bottom: 10px;
+  line-height: 1.3;
 }
 
 .cardDesc {
-  font-size: var(--font-size-sm);
-  color: var(--color-text-muted);
-  line-height: 1.5;
-  margin-bottom: var(--spacing-lg);
+  font-size: 13.5px;
+  color: #64748b;
+  line-height: 1.55;
+  margin-bottom: 18px;
+  flex: 1;
+}
+
+/* Auspicious Vedic Amount Chips */
+.amountSectionLabel {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #8c5b36;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
 }
 
 .amountPills {
   display: flex;
-  gap: var(--spacing-xs);
+  gap: 8px;
   flex-wrap: wrap;
+  margin-bottom: 20px;
 }
 
 .amountPill {
-  background: #f1f5f9;
-  color: var(--color-navy);
-  font-size: var(--font-size-xs);
-  font-weight: 600;
-  padding: 4px 10px;
-  border-radius: var(--radius-md);
+  background: #faf6ee;
+  border: 1px solid rgba(212, 175, 55, 0.45);
+  color: #7A1C1C;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 6px;
   text-decoration: none;
-  transition: all var(--transition-fast);
+  transition: all 0.15s ease;
 }
 
 .amountPill:hover {
-  background: var(--color-saffron);
-  color: var(--color-white);
+  background: #fdf1de;
+  border-color: #f74f22;
+  color: #f74f22;
+  transform: translateY(-1px);
 }
 
+/* Card Footer Actions */
 .cardFooter {
-  padding: var(--spacing-lg);
-  border-top: 1px solid var(--color-gray-light);
-  background: #fafaf9;
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 10px;
+  padding: 16px 24px 22px;
+  background: #faf8f5;
+  border-top: 1px solid #ebd9c0;
+}
+
+.detailsBtn {
+  background: #ffffff;
+  color: #7A1C1C;
+  border: 1.5px solid #d9d0c1;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+
+.detailsBtn:hover {
+  background: #fdfaf4;
+  border-color: #7A1C1C;
 }
 
 .donateBtn {
-  display: block;
+  background: linear-gradient(135deg, #f74f22 0%, #e03b0f 100%);
+  color: #ffffff;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 13.5px;
+  font-weight: 700;
   text-align: center;
-  background: var(--color-saffron);
-  color: var(--color-white);
-  padding: var(--spacing-md);
-  border-radius: var(--radius-md);
-  font-weight: 600;
-  font-size: var(--font-size-sm);
   text-decoration: none;
-  transition: background var(--transition-fast);
+  box-shadow: 0 4px 12px rgba(247, 79, 34, 0.25);
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
 }
 
 .donateBtn:hover {
-  background: var(--color-saffron-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(247, 79, 34, 0.38);
+  color: #ffffff;
 }
 
-/* Bank details card */
+/* ==========================================================================
+   8. Direct Bank Transfer & Treasury Card
+   ========================================================================== */
 .bankCard {
-  background: var(--color-white);
-  border-radius: var(--radius-lg);
-  padding: var(--spacing-2xl);
-  box-shadow: var(--shadow-md);
-  border: 1px solid var(--color-gray-light);
+  background: #ffffff;
+  border: 2px solid #D4AF37;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 8px 30px rgba(122, 28, 28, 0.08);
+  margin-bottom: 40px;
+  position: relative;
 }
 
 .bankHeader {
   display: flex;
-  gap: var(--spacing-lg);
-  margin-bottom: var(--spacing-xl);
   align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1.5px solid #f2eae0;
 }
 
 .bankIcon {
-  font-size: 2.5rem;
-  background: rgba(247, 79, 34, 0.1);
-  padding: var(--spacing-md);
-  border-radius: var(--radius-md);
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background: #fcf6eb;
+  border: 1.5px solid #D4AF37;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  flex-shrink: 0;
 }
 
 .bankHeader h3 {
-  font-size: var(--font-size-xl);
-  color: var(--color-navy);
+  font-family: var(--font-serif-temple), "Cinzel", Georgia, serif;
+  font-size: 20px;
   font-weight: 700;
+  color: #7A1C1C;
+  margin: 0 0 4px;
 }
 
 .bankHeader p {
-  font-size: var(--font-size-sm);
-  color: var(--color-text-muted);
+  font-size: 14px;
+  color: #64748b;
+  margin: 0;
 }
 
 .bankDetailsGrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: var(--spacing-xl);
-  margin-bottom: var(--spacing-xl);
-}
-
-@media (max-width: 640px) {
-  .bankDetailsGrid {
-    grid-template-columns: 1fr;
-  }
+  gap: 24px;
+  margin-bottom: 24px;
 }
 
 .bankBox {
-  background: #fafaf9;
-  border-radius: var(--radius-md);
-  padding: var(--spacing-lg);
-  border: 1px solid var(--color-gray-light);
+  background: #faf8f5;
+  border: 1px solid #ebd9c0;
+  border-radius: 12px;
+  padding: 22px;
+  position: relative;
 }
 
 .bankBox h4 {
-  font-size: var(--font-size-base);
-  color: var(--color-navy);
+  font-family: var(--font-serif-temple), "Cinzel", Georgia, serif;
+  font-size: 16.5px;
   font-weight: 700;
-  margin-bottom: var(--spacing-sm);
-  border-bottom: 2px solid var(--color-saffron);
-  padding-bottom: 4px;
+  color: #7A1C1C;
+  margin: 0 0 14px;
+  padding-bottom: 8px;
+  border-bottom: 1px dashed #d9d0c1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.bankBox p {
-  font-size: var(--font-size-sm);
-  color: #334155;
-  margin-bottom: 4px;
+.bankRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 0;
+  font-size: 13.5px;
+  border-bottom: 1px solid #f2eae0;
+}
+
+.bankRow:last-child {
+  border-bottom: none;
+}
+
+.bankLabel {
+  color: #64748b;
+  font-weight: 500;
+}
+
+.bankVal {
+  color: #1e293b;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.bankMono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 14px;
+  color: #7A1C1C;
+  letter-spacing: 0.5px;
+}
+
+.copyInlineBtn {
+  background: #ffffff;
+  border: 1px solid #d9d0c1;
+  border-radius: 4px;
+  padding: 2px 7px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #7A1C1C;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.copyInlineBtn:hover {
+  background: #fdf5ea;
+  border-color: #f74f22;
+  color: #f74f22;
 }
 
 .bankNotice {
-  background: #fffbeb;
-  border-left: 4px solid var(--color-gold);
-  padding: var(--spacing-md);
-  font-size: var(--font-size-xs);
-  color: #78350f;
-  border-radius: var(--radius-sm);
+  background: #fdfbf7;
+  border: 1px dashed #D4AF37;
+  border-radius: 10px;
+  padding: 16px 20px;
+  font-size: 13.5px;
+  color: #64748b;
+  line-height: 1.55;
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
 .bankNotice a {
-  color: var(--color-saffron);
+  color: #7A1C1C;
   font-weight: 700;
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   9. Devotee FAQ Accordion
+   ========================================================================== */
+.faqSection {
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  padding: 32px;
+  box-shadow: 0 4px 20px rgba(122, 28, 28, 0.05);
+}
+
+.faqHeader {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.faqHeader h3 {
+  font-family: var(--font-serif-temple), "Cinzel", Georgia, serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #7A1C1C;
+  margin-bottom: 6px;
+}
+
+.faqHeader p {
+  font-size: 14.5px;
+  color: #64748b;
+}
+
+.faqList {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.faqItem {
+  border: 1.5px solid #ebd9c0;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+.faqItemOpen {
+  border-color: #D4AF37;
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.1);
+}
+
+.faqQuestion {
+  width: 100%;
+  background: #faf8f5;
+  border: none;
+  padding: 16px 20px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #1e293b;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.faqQuestion:hover {
+  background: #fdf5ea;
+  color: #7A1C1C;
+}
+
+.faqChevron {
+  font-size: 18px;
+  color: #7A1C1C;
+  transition: transform 0.2s ease;
+}
+
+.faqChevronOpen {
+  transform: rotate(180deg);
+}
+
+.faqAnswer {
+  padding: 16px 20px;
+  background: #ffffff;
+  font-size: 14px;
+  color: #475569;
+  line-height: 1.6;
+  border-top: 1px solid #ebd9c0;
+}
+
+/* ==========================================================================
+   10. Toast Notification
+   ========================================================================== */
+.toastNotification {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1e293b;
+  color: #ffffff;
+  padding: 10px 22px;
+  border-radius: 9999px;
+  font-size: 13.5px;
+  font-weight: 600;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 9999;
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translate(-50%, 15px); }
+  to { opacity: 1; transform: translate(-50%, 0); }
+}
+
+/* ==========================================================================
+   11. Responsive Styles
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .impactRibbon {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 120px 16px 60px;
+  }
+  .contentWrap {
+    margin-top: -20px;
+    padding: 0 16px;
+  }
+  .categoriesGrid {
+    grid-template-columns: 1fr;
+  }
+  .impactRibbon {
+    grid-template-columns: 1fr;
+  }
+  .taxExemptionCard {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .bankDetailsGrid {
+    grid-template-columns: 1fr;
+  }
 }

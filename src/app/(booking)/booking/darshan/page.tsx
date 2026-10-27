@@ -5,6 +5,7 @@ import Link from "next/link";
 import { apiClient } from "@/lib/api-client";
 import { DARSHAN_SLOTS } from "@/lib/constants";
 import styles from "./darshan-booking.module.css";
+import { DarshanTicketPass } from "./DarshanTicketPass";
 
 interface Attendee {
   fullName: string;
@@ -109,68 +110,31 @@ export default function DarshanBookingPage() {
 
   if (successData) {
     return (
-      <div className={styles.pageContainer}>
-        <div className="container">
-          <div className={styles.successCard}>
-            <div className={styles.successHeader}>
-              <span className={styles.successIcon}>✓</span>
-              <h2>Shighra Darshan Ticket Booked!</h2>
-              <p>Har Har Mahadev. Your booking has been registered and verified with the temple trust.</p>
-            </div>
-
-            <div className={styles.ticketSummaryBox}>
-              <div className={styles.summaryRow}>
-                <span>Booking Reference:</span>
-                <strong>{successData.bookingReference}</strong>
-              </div>
-              <div className={styles.summaryRow}>
-                <span>Ticket Number:</span>
-                <strong>{successData.ticketNumber}</strong>
-              </div>
-              <div className={styles.summaryRow}>
-                <span>Darshan Date:</span>
-                <strong>{successData.date}</strong>
-              </div>
-              <div className={styles.summaryRow}>
-                <span>Time Slot:</span>
-                <strong>{successData.slotName}</strong>
-              </div>
-              <div className={styles.summaryRow}>
-                <span>Total Persons:</span>
-                <strong>{successData.totalPersons} Devotees</strong>
-              </div>
-              <div className={styles.summaryRow}>
-                <span>Total Amount Paid:</span>
-                <strong className={styles.paidAmount}>₹{successData.totalAmount}</strong>
-              </div>
-              <div className={styles.summaryRow}>
-                <span>Gate Entry Status:</span>
-                <span className={styles.statusConfirmed}>CONFIRMED (Valid for Gate QR Scan)</span>
-              </div>
-            </div>
-
-            <div className={styles.qrSimulationBox}>
-              <div className={styles.qrCodeGraphic}>
-                <span>[GATE ENTRY QR: {successData.ticketNumber}]</span>
-              </div>
-              <p>Present this QR code and original photo IDs at the Shighra Darshan entry turnstile.</p>
-            </div>
-
-            <div className={styles.successActions}>
-              <button
-                type="button"
-                className="btn-primary"
-                onClick={() => window.print()}
-              >
-                🖨️ Print / Download Ticket
-              </button>
-              <Link href="/" className="btn-secondary">
-                Return to Home
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
+      <DarshanTicketPass
+        bookingData={successData}
+        primaryDevotee={{
+          name: `${firstName} ${lastName}`.trim() || successData.devotee?.name,
+          mobile: mobile || successData.devotee?.mobile,
+          idProofType,
+          idProofNumber,
+          email,
+        }}
+        attendees={
+          successData.attendees && successData.attendees.length > 0
+            ? successData.attendees
+            : attendees
+        }
+        onBookAnother={() => {
+          setSuccessData(null);
+          setFirstName("");
+          setLastName("");
+          setMobile("");
+          setIdProofNumber("");
+          setEmail("");
+          setAddress("");
+          setAttendees([]);
+        }}
+      />
     );
   }
 

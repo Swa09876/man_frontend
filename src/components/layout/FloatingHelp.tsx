@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import styles from "./FloatingHelp.module.css";
+import { TEMPLE_INFO } from "@/lib/constants";
 
 export const FloatingHelp: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,8 +12,8 @@ export const FloatingHelp: React.FC = () => {
     <div className={styles.helpFloat}>
       {isOpen && (
         <div className={styles.helpOptions}>
-          <a href="tel:8989998686" className={styles.optionLink}>
-            📞 24x7 Helpline: 8989998686
+          <a href={`tel:${TEMPLE_INFO.helpline}`} className={styles.optionLink}>
+            📞 24x7 Helpline: {TEMPLE_INFO.helpline}
           </a>
           <Link
             href="/booking/find-booking"

@@ -45,7 +45,7 @@ export default function ContactPage() {
 
               <div className={styles.contactLine}>
                 <span className={styles.label}>📞 24x7 Control Room:</span>
-                <a href="tel:8989998686">8989998686</a>
+                <a href="tel:8770473325">8770473325</a>
               </div>
               <div className={styles.contactLine}>
                 <span className={styles.label}>✉️ Official Email:</span>
@@ -77,21 +77,21 @@ export default function ContactPage() {
                   <strong>Puja Coordination & Priest Office</strong>
                   <span>Abhishek, Havan & Sankalpam</span>
                 </div>
-                <span className={styles.phoneTag}>8989998686 (Ext 1)</span>
+                <span className={styles.phoneTag}>8770473325 (Ext 1)</span>
               </div>
               <div className={styles.deptItem}>
                 <div>
                   <strong>Accounts & 80G Tax Exemption Cell</strong>
                   <span>Donation receipts & IT exemptions</span>
                 </div>
-                <span className={styles.phoneTag}>8989998686 (Ext 2)</span>
+                <span className={styles.phoneTag}>8770473325 (Ext 2)</span>
               </div>
               <div className={styles.deptItem}>
                 <div>
                   <strong>Mahaprasad Dispatch (India Post)</strong>
                   <span>Speed Post tracking inquiries</span>
                 </div>
-                <span className={styles.phoneTag}>8989998686 (Ext 3)</span>
+                <span className={styles.phoneTag}>8770473325 (Ext 3)</span>
               </div>
             </div>
           </div>

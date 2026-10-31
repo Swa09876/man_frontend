@@ -118,8 +118,8 @@ export default function FAQPage() {
         <div className={styles.helpFooter}>
           <h3>Still have questions?</h3>
           <p>Our devotee support helpline is active 24 hours a day, 7 days a week.</p>
-          <a href="tel:8989998686" className={styles.callBtn}>
-            📞 Call Helpline 8989998686
+          <a href="tel:8770473325" className={styles.callBtn}>
+            📞 Call Helpline 8770473325
           </a>
         </div>
       </div>

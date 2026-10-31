@@ -16,7 +16,7 @@ export default function AdministrationPage() {
       keyFacts={[
         { label: "Governing Body", value: "Shri Omkareshwar Mandir Trust", icon: "🏛️" },
         { label: "Head Office", value: "Mandhata Island, Omkareshwar", icon: "📍" },
-        { label: "Control Room", value: "24x7 Helpline: 8989998686", icon: "📞" },
+        { label: "Control Room", value: "24x7 Helpline: 8770473325", icon: "📞" },
         { label: "Jurisdiction", value: "District Administration Khandwa", icon: "⚖️" },
       ]}
       sections={[

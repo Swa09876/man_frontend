@@ -205,8 +205,8 @@ export const ContentPageTemplate: React.FC<ContentPageProps> = ({
               <div className={styles.helpIcon}>📞</div>
               <h4>24x7 Control Room & Helpline</h4>
               <p>For urgent darshan, wheel chair, or medical assistance:</p>
-              <a href="tel:8989998686" className={styles.phoneBtn}>
-                Call 8989998686
+              <a href="tel:8770473325" className={styles.phoneBtn}>
+                Call 8770473325
               </a>
               <span className={styles.tollFreeText}>Mandhata Island Control Room</span>
             </div>

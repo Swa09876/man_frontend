@@ -192,7 +192,7 @@ export default function TicketReprintPage() {
                   🔍 <strong>Lost Your Reference?</strong> You can search all bookings linked to your phone number on our <Link href="/booking/find-booking">Find Booking Page →</Link>.
                 </li>
                 <li>
-                  📞 <strong>24x7 Mandir Helpline:</strong> For urgent gate assistance, contact the temple control room at <strong>8989998686</strong>.
+                  📞 <strong>24x7 Mandir Helpline:</strong> For urgent gate assistance, contact the temple control room at <strong>8770473325</strong>.
                 </li>
               </ul>
             </div>

@@ -17,7 +17,7 @@ export default function SchedulesPage() {
         { label: "Temple Opening", value: "04:30 AM Every Morning", icon: "🌅" },
         { label: "Darshan Closing", value: "09:30 PM (Post Shayan Aarti)", icon: "🌙" },
         { label: "Daily Aartis", value: "Three Major Aartis Daily", icon: "🔔" },
-        { label: "Helpline", value: "Control Room: 8989998686", icon: "📞" },
+        { label: "Helpline", value: "Control Room: 8770473325", icon: "📞" },
       ]}
       sections={[
         {

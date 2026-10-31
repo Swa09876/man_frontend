@@ -17,7 +17,7 @@ export default function WristbandPointsPage() {
         { label: "Cost", value: "100% Free of Cost", icon: "🏷️" },
         { label: "Material", value: "Tear-Resistant & Waterproof", icon: "🛡️" },
         { label: "Kiosk Locations", value: "5 Major Bridge & Ghat Checkpoints", icon: "📍" },
-        { label: "Helpline", value: "Lost & Found Cell: 8989998686", icon: "📢" },
+        { label: "Helpline", value: "Lost & Found Cell: 8770473325", icon: "📢" },
       ]}
       sections={[
         {

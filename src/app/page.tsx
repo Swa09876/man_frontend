@@ -80,71 +80,55 @@ export default function HomePage() {
                 <span>SACRED ORIGIN & PURANIC HISTORY</span>
               </div>
               <h2 className={styles.welcomeHeading}>The Timeless History of Shri Omkareshwar</h2>
-              <p className={styles.welcomeLead}>
-                Revered for over two millennia as the fourth sacred Jyotirlinga, Shri Omkareshwar presides
-                majestically on the sacred island of Mandhata, where Maa Narmada naturally carves the eternal
-                syllable &apos;ॐ&apos;. Its sacred history weaves ancient Puranic penance, Jagadguru Adi
-                Shankaracharya&apos;s spiritual revival, and regal temple architecture across dynasties.
-              </p>
+              
+              <div className={styles.welcomeNarrative}>
+                <p className={styles.welcomeLead}>
+                  Revered for over two millennia as the fourth sacred Jyotirlinga, Shri Omkareshwar presides
+                  majestically on the holy island of Mandhata, where Maa Narmada naturally divides to carve the eternal
+                  syllable <strong>&apos;ॐ&apos;</strong>. According to the Shiva Purana, Emperor Mandhata of the Ikshvaku dynasty
+                  performed thousands of years of arduous penance here, moving Bhagwan Shiva to manifest as the self-emerged (Swayambhu) Jyotirlinga.
+                </p>
+                <p className={styles.welcomeSubtext}>
+                  The sacred pilgrimage uniquely unites two holy shrines into one indivisible Jyotirlinga — <strong>Shri Omkareshwar</strong> on the sacred island and <strong>Shri Mamleshwar</strong> on the southern mainland. It was also here, inside the sacred Govinda Bhagavatpada Guha cave, that <strong>Jagadguru Adi Shankaracharya</strong> received divine initiation to revive Sanatana Dharma across Bharat.
+                </p>
+              </div>
 
-              <div className={styles.welcomeFeatures}>
-                <div className={styles.welcomeFeatureItem}>
-                  <div className={styles.featureIconWrap}>
-                    <span className={styles.featureIcon}>🔱</span>
-                  </div>
-                  <div className={styles.featureTextWrap}>
-                    <div className={styles.featureMeta}>
-                      <span className={styles.featureEpoch}>PURANIC ORIGINS • SATYAYUGA</span>
-                    </div>
-                    <h4>King Mandhata&apos;s Penance &amp; Swayambhu Manifestation</h4>
-                    <p>
-                      According to the Shiva Purana, King Mandhata performed intense penance on this island. Pleased by his supreme devotion, Bhagwan Shiva appeared and manifested as the self-emerged (Swayambhu) Jyotirlinga.
-                    </p>
+              {/* Sacred Sanskrit Shloka Banner */}
+              <div className={styles.shlokaCard}>
+                <div className={styles.shlokaOmWatermark}>ॐ</div>
+                <div className={styles.shlokaContent}>
+                  <p className={styles.sanskritVerse}>
+                    कावेरी नर्मदयोः पवित्रे समागमे सज्जनतारणाय।<br />
+                    ओंकारमीशं शिवमेकमीडे॥
+                  </p>
+                  <p className={styles.shlokaMeaning}>
+                    &ldquo;At the sacred confluence of Narmada and Kaveri, I praise the Lord of Omkara, Lord Shiva, who redeems all devoted souls.&rdquo;
+                  </p>
+                  <span className={styles.shlokaSource}>— द्वादश ज्योतिर्लिंग स्तोत्रम् (Dwadasa Jyotirlinga Stotram)</span>
+                </div>
+              </div>
+
+              {/* Dignified Heritage Badges */}
+              <div className={styles.heritagePillars}>
+                <div className={styles.heritagePillarItem}>
+                  <span className={styles.pillarIcon}>🔱</span>
+                  <div className={styles.pillarText}>
+                    <strong>4th Jyotirlinga</strong>
+                    <span>Swayambhu Shrine</span>
                   </div>
                 </div>
-
-                <div className={styles.welcomeFeatureItem}>
-                  <div className={styles.featureIconWrap}>
-                    <span className={styles.featureIcon}>🕉️</span>
-                  </div>
-                  <div className={styles.featureTextWrap}>
-                    <div className={styles.featureMeta}>
-                      <span className={styles.featureEpoch}>SACRED GEOGRAPHY</span>
-                    </div>
-                    <h4>Naturally Carved &apos;ॐ&apos; Island &amp; Dual Shrines</h4>
-                    <p>
-                      Maa Narmada naturally divides around Mandhata island, carving the sacred cosmic sound &apos;Om&apos;. The pilgrimage unites two holy shrines — Shri Omkareshwar and the southern Shri Mamleshwar — into one indivisible Jyotirlinga.
-                    </p>
+                <div className={styles.heritagePillarItem}>
+                  <span className={styles.pillarIcon}>🕉️</span>
+                  <div className={styles.pillarText}>
+                    <strong>Mandhata Island</strong>
+                    <span>Natural &apos;ॐ&apos; Syllable</span>
                   </div>
                 </div>
-
-                <div className={styles.welcomeFeatureItem}>
-                  <div className={styles.featureIconWrap}>
-                    <span className={styles.featureIcon}>🪔</span>
-                  </div>
-                  <div className={styles.featureTextWrap}>
-                    <div className={styles.featureMeta}>
-                      <span className={styles.featureEpoch}>8TH CENTURY CE • ADVAITA REVIVAL</span>
-                    </div>
-                    <h4>Jagadguru Adi Shankaracharya&apos;s Guru Diksha</h4>
-                    <p>
-                      At the sacred Govinda Bhagavatpada Guha cave on this island, Jagadguru Adi Shankara met his Guru and received divine initiation, embarking from here to revive Sanatana Dharma across Bharat.
-                    </p>
-                  </div>
-                </div>
-
-                <div className={styles.welcomeFeatureItem}>
-                  <div className={styles.featureIconWrap}>
-                    <span className={styles.featureIcon}>🏛️</span>
-                  </div>
-                  <div className={styles.featureTextWrap}>
-                    <div className={styles.featureMeta}>
-                      <span className={styles.featureEpoch}>ARCHITECTURAL HERITAGE • 2000+ YEARS</span>
-                    </div>
-                    <h4>Five-Storeyed Nagara Temple &amp; Holkar Legacy</h4>
-                    <p>
-                      Enriched by Paramara kings and reconstructed with royal reverence by Maharani Ahilyabai Holkar, the five-tiered stone temple features intricate carvings, celestial sabhamandaps, and golden spires.
-                    </p>
+                <div className={styles.heritagePillarItem}>
+                  <span className={styles.pillarIcon}>🏛️</span>
+                  <div className={styles.pillarText}>
+                    <strong>Nagara Heritage</strong>
+                    <span>Ahilyabai Holkar Legacy</span>
                   </div>
                 </div>
               </div>

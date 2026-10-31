@@ -14,7 +14,7 @@ export default function MedicalFacilityPage() {
       category="Facility"
       categoryHref="/facility/accommodation"
       keyFacts={[
-        { label: "Emergency Helpline", value: "8989998686 / 108", icon: "🚑" },
+        { label: "Emergency Helpline", value: "8770473325 / 108", icon: "🚑" },
         { label: "Service Availability", value: "24 Hours x 365 Days", icon: "⏰" },
         { label: "Water Ambulance", value: "Equipped Speed Rescue Boat", icon: "🚤" },
         { label: "Consultation & Meds", value: "Completely Free of Cost", icon: "💊" },

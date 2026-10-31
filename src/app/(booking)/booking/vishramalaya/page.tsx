@@ -165,7 +165,7 @@ export default function VishramalayaPage() {
             <li>Vishramalaya passes are issued on first-come-first-served basis for authentic devotees and yatris.</li>
             <li>Online bookings must be confirmed at least 24 hours prior to the date of arrival.</li>
             <li>Separate secure dormitory and family rooms are maintained with 24x7 security surveillance.</li>
-            <li>Helpline for room assistance: <strong>8989998686</strong>.</li>
+            <li>Helpline for room assistance: <strong>8770473325</strong>.</li>
           </ul>
         </div>
 

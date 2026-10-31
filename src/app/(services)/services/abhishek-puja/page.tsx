@@ -171,7 +171,7 @@ export default function AbhishekPujaPage() {
               <h3>Pujan Sahayata & Priest Coordination</h3>
               <p>For custom Samuhik Abhishek, Nakshatra Shanti, or accommodation assistance, reach temple reception.</p>
               <div className={styles.helplineNumbers}>
-                <a href="tel:8989998686" className={styles.callBadge}>Call 8989998686</a>
+                <a href="tel:8770473325" className={styles.callBadge}>Call 8770473325</a>
                 <span className={styles.timeNotice}>Open 24 Hours Daily</span>
               </div>
             </div>

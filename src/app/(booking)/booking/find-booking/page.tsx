@@ -176,8 +176,8 @@ export default function FindBookingPage() {
                   <Link href="/booking/darshan" className={styles.bookNowBtn}>
                     Book Shighra Darshan Now
                   </Link>
-                  <a href="tel:8989998686" className={styles.helpBtn}>
-                    Call Helpline 8989998686
+                  <a href="tel:8770473325" className={styles.helpBtn}>
+                    Call Helpline 8770473325
                   </a>
                 </div>
               </div>
@@ -243,7 +243,7 @@ export default function FindBookingPage() {
             <li>Please reach the Shighra Darshan reporting entry gate at least 20 minutes before your allotted slot.</li>
             <li>Original government photo ID (Aadhaar / Voter ID / Passport) is strictly required for all attendees.</li>
             <li>Smartphones or printed paper copies of this ticket are accepted at the biometric scanning gates.</li>
-            <li>For any cancellation or slot alteration queries, please contact the Mandir Control Room at <strong>8989998686</strong>.</li>
+            <li>For any cancellation or slot alteration queries, please contact the Mandir Control Room at <strong>8770473325</strong>.</li>
           </ul>
         </div>
       </div>

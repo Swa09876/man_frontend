@@ -12,7 +12,7 @@ export interface NavMenu {
 export const TEMPLE_INFO = {
   name: "Shri Omkareshwar Jyotirlinga",
   trustName: "Shri Omkareshwar Mandir Trust",
-  helpline: "8989998686",
+  helpline: process.env.NEXT_PUBLIC_HELPLINE || "8770473325",
   email: "info@shriomkareshwar.org",
   address: "Mandhata Island, Omkareshwar, District Khandwa, Madhya Pradesh - 450535",
   youtubeLiveChannel: "UCsIZ3yYwCW4316fPX3V-4lg",

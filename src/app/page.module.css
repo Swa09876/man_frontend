@@ -365,87 +365,134 @@
   letter-spacing: 0.5px;
 }
 
+.welcomeNarrative {
+  margin-bottom: 24px;
+}
+
 .welcomeLead {
-  font-size: 16.5px;
-  line-height: 1.7;
+  font-size: 16px;
+  line-height: 1.75;
   color: #374151;
-  margin-bottom: 28px;
+  margin-bottom: 14px;
 }
 
-.welcomeFeatures {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-  margin-bottom: 36px;
+.welcomeSubtext {
+  font-size: 15px;
+  line-height: 1.72;
+  color: #4b5563;
+  margin: 0;
 }
 
-.welcomeFeatureItem {
-  display: flex;
-  align-items: flex-start;
-  gap: 16px;
-  background: #ffffff;
-  padding: 16px 20px;
-  border-radius: var(--radius-md);
-  border: 1px solid var(--border-color);
-  border-left: 4px solid var(--saffron-primary);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+/* Sacred Sanskrit Shloka Card */
+.shlokaCard {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, rgba(255, 252, 246, 0.95) 0%, rgba(254, 246, 235, 0.9) 100%);
+  border: 1px solid rgba(212, 175, 55, 0.45);
+  border-left: 4px solid var(--gold-primary, #D4AF37);
+  border-radius: var(--radius-md, 12px);
+  padding: 20px 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 18px rgba(122, 28, 28, 0.04);
 }
 
-.welcomeFeatureItem:hover {
-  transform: translateX(4px);
-  border-left-color: var(--maroon-primary);
-  border-color: rgba(212, 175, 55, 0.5);
-  box-shadow: 0 6px 18px rgba(122, 28, 28, 0.08);
-}
-
-.featureIconWrap {
-  width: 44px;
-  height: 44px;
-  min-width: 44px;
-  border-radius: 10px;
-  background: rgba(247, 79, 34, 0.08);
-  border: 1px solid rgba(247, 79, 34, 0.2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.featureIcon {
-  font-size: 22px;
-  line-height: 1;
-}
-
-.featureTextWrap {
-  flex: 1;
-}
-
-.featureMeta {
-  margin-bottom: 3px;
-}
-
-.featureEpoch {
-  font-size: 11px;
+.shlokaOmWatermark {
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: var(--font-serif-temple), Georgia, serif;
+  font-size: 88px;
   font-weight: 700;
-  color: var(--saffron-primary);
+  color: rgba(212, 175, 55, 0.12);
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+}
+
+.shlokaContent {
+  position: relative;
+  z-index: 1;
+}
+
+.sanskritVerse {
+  font-family: var(--font-serif-temple), "Noto Sans Devanagari", Georgia, serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--maroon-primary, #7A1C1C);
+  line-height: 1.6;
+  margin: 0 0 8px;
+  letter-spacing: 0.5px;
+}
+
+.shlokaMeaning {
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: #5c3d2e;
+  font-style: italic;
+  margin: 0 0 6px;
+}
+
+.shlokaSource {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--saffron-primary, #F74F22);
   letter-spacing: 0.8px;
   text-transform: uppercase;
+  display: block;
 }
 
-.welcomeFeatureItem h4 {
+/* Dignified Heritage Strip */
+.heritagePillars {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.heritagePillarItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #ffffff;
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  border-radius: 10px;
+  padding: 12px 14px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  transition: all 0.25s ease;
+}
+
+.heritagePillarItem:hover {
+  transform: translateY(-2px);
+  border-color: rgba(212, 175, 55, 0.8);
+  box-shadow: 0 6px 16px rgba(122, 28, 28, 0.08);
+}
+
+.pillarIcon {
+  font-size: 22px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.pillarText {
+  display: flex;
+  flex-direction: column;
+}
+
+.pillarText strong {
   font-family: var(--font-serif-temple);
-  font-size: 16px;
+  font-size: 13px;
   font-weight: 700;
   color: var(--maroon-primary);
-  margin-bottom: 5px;
+  line-height: 1.25;
   letter-spacing: 0.2px;
 }
 
-.welcomeFeatureItem p {
-  font-size: 13.5px;
-  line-height: 1.55;
-  color: #4b5563;
-  margin: 0;
+.pillarText span {
+  font-size: 11.5px;
+  color: #6b7280;
+  line-height: 1.25;
+  margin-top: 2px;
 }
 
 .welcomeActions {
@@ -1211,6 +1258,11 @@
 
   .welcomeHeading {
     font-size: 28px;
+  }
+
+  .heritagePillars {
+    grid-template-columns: 1fr;
+    gap: 10px;
   }
 
   .servicesGrid {

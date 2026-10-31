@@ -3,6 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import styles from "./TopBar.module.css";
+import { TEMPLE_INFO } from "@/lib/constants";
 
 export const TopBar: React.FC = () => {
   return (
@@ -34,7 +35,7 @@ export const TopBar: React.FC = () => {
 
           <div className={styles.rightSection}>
             <div className={styles.helplineNotice}>
-              24x7 Helpline: <a href="tel:8989998686">8989998686</a>
+              24x7 Helpline: <a href={`tel:${TEMPLE_INFO.helpline}`}>{TEMPLE_INFO.helpline}</a>
             </div>
             <div id="google_translate_element" className={styles.translateWrapper}>
               {/* Google translate fallback */}
